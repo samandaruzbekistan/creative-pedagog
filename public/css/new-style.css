@@ -1,0 +1,39 @@
+.input-group-navbar {
+    direction: ltr;
+}
+
+
+.input-group.has-validation>.dropdown-toggle:nth-last-child(n+4), .input-group.has-validation>.form-floating:nth-last-child(n+3)>.form-control, .input-group.has-validation>.form-floating:nth-last-child(n+3)>.form-select, .input-group.has-validation>:nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating), .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-control, .input-group:not(.has-validation)>.form-floating:not(:last-child)>.form-select, .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -1px;
+}
+
+.input-group-navbar .btn {
+    color: #6c757d;
+}
+
+.input-group > .form-control, .input-group > .form-floating, .input-group > .form-select {
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative;
+    width: 1%;
+}
+
+.navbar input {
+    direction: ltr;
+}
+
+.input-group-navbar .btn, .input-group-navbar .form-control {
+    background: #f3f6fa;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: none;
+    height: calc(2.1875rem + 2px);
+    padding: 0.4rem 1rem;
+}
