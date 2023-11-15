@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::prefix('admin')->group(function () {
-    Route::get('/users', function () {
-        // Matches The "/admin/users" URL
-    });
+    Route::view('/', 'admin.login')->name("admin.login");
+    Route::post('/auth', [AdminController::class,'auth'])->name('admin.auth');
 });
