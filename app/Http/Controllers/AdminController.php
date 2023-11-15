@@ -15,7 +15,9 @@ class AdminController extends Controller
         $admin = Admin::where('username', $request->username)->first();
         if (!empty($admin)){
             if ($admin->password == $request->password){
-                return "success";
+                session()->put('admin',1);
+                session()->put('fullname',$admin->fullname);
+                return redirect()->route('admin.home');
             }
             else{
                 return back()->with("login_error",1);
@@ -24,6 +26,14 @@ class AdminController extends Controller
         else{
             return back()->with("login_error",1);
         }
-        return $request;
+    }
+
+    public function home(){
+        if (session('admin') == 1){
+            return "home";
+        }
+        else{
+            return redirect()->route('admin.login');
+        }
     }
 }
