@@ -28,9 +28,14 @@ class AdminController extends Controller
         }
     }
 
+    public function logout(){
+        session()->flush();
+        return redirect()->route('admin.login');
+    }
+
     public function home(){
         if (session('admin') == 1){
-            return "home";
+            return view('admin.home');
         }
         else{
             return redirect()->route('admin.login');
