@@ -24,10 +24,17 @@ Route::prefix('admin')->group(function () {
         Route::get('logout', [AdminController::class, 'logout'])->name('admin.logout');
         Route::get('home', [AdminController::class, 'home'])->name('admin.home');
 
+//        Foreign books routes
         Route::get('foreign', [AdminController::class, 'foreign'])->name('admin.foreign');
         Route::post('foreign-upload', [AdminController::class, 'foreign_upload'])->name('admin.foreign.upload');
         Route::post('foreign-delete', [AdminController::class, 'foreign_delete'])->name('admin.foreign.delete');
         Route::get('foreign-download/{id}', [AdminController::class, 'foreign_download'])->name('admin.foreign.download');
+
+//        School books routes
+        Route::get('school', [AdminController::class, 'school'])->name('admin.school');
+        Route::post('school-upload', [AdminController::class, 'school_upload'])->name('admin.school.upload');
+        Route::post('school-delete', [AdminController::class, 'school_delete'])->name('admin.school.delete');
+        Route::get('school-download/{id}', [AdminController::class, 'school_download'])->name('admin.school.download');
     });
 });
 
