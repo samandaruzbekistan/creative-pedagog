@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Repositories\AcademicBookRepository;
 use App\Repositories\ForeignBooksRepository;
 use App\Repositories\SchoolBooksRepository;
 use Illuminate\Http\Request;
@@ -11,7 +12,8 @@ class AdminController extends Controller
 {
     public function __construct(
         protected ForeignBooksRepository $foreignBooksRepository,
-        protected SchoolBooksRepository $schoolBooksRepository
+        protected SchoolBooksRepository $schoolBooksRepository,
+        protected AcademicBookRepository $academicBookRepository,
     )
     {
     }
@@ -103,7 +105,7 @@ class AdminController extends Controller
     }
 
 
-//  School book control
+//  Foreign book control
     public function school(){
         $books = $this->schoolBooksRepository->getAllBooks();
         return view('admin.school', ['books' => $books]);
@@ -143,6 +145,56 @@ class AdminController extends Controller
 
     public function school_download($id){
         $book = $this->schoolBooksRepository->getBook($id);
+        $file= public_path(). "/books/".$book->file;
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+
+        return response()->download($file, $book->file, $headers);
+    }
+
+
+//  Academic book control
+    public function academic(){
+        $books = $this->academicBookRepository->getAllBooks();
+        return view('admin.academic', ['books' => $books]);
+    }
+
+    public function academic_upload(Request $request){
+        $request->validate([
+            'name' => 'required|string',
+            'photo' => 'required|file',
+            'file' => 'required|file',
+        ]);
+        $photo = $request->file('photo')->extension();
+        $name = md5(microtime());
+        $photo_name = $name.".".$photo;
+        $path = $request->file('photo')->move('img/book/',$photo_name);
+
+        $rand_number = rand(1,10);
+        $extension = $request->file('file')->extension();
+        $orginal_name = $request->file('file')->getClientOriginalName();
+        $file_name = $rand_number.' '.$orginal_name.".".$extension;
+        $path2 = $request->file('file')->move('books/',$file_name);
+
+        $this->academicBookRepository->new_book($request->name, $photo_name, $file_name);
+        return back()->with('success', 1);
+    }
+
+    public function academic_delete(Request $request){
+        $request->validate([
+            'book_id' => 'required'
+        ]);
+        $book = $this->academicBookRepository->getBook($request->book_id);
+        unlink('img/book/'.$book->photo);
+        unlink('books/'.$book->file);
+        $this->academicBookRepository->delete_book($request->book_id);
+        return back()->with('delete',1);
+    }
+
+    public function academic_download($id){
+        $book = $this->academicBookRepository->getBook($id);
         $file= public_path(). "/books/".$book->file;
 
         $headers = array(

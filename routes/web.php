@@ -35,6 +35,12 @@ Route::prefix('admin')->group(function () {
         Route::post('school-upload', [AdminController::class, 'school_upload'])->name('admin.school.upload');
         Route::post('school-delete', [AdminController::class, 'school_delete'])->name('admin.school.delete');
         Route::get('school-download/{id}', [AdminController::class, 'school_download'])->name('admin.school.download');
+
+//        Academic books routes
+        Route::get('academic', [AdminController::class, 'academic'])->name('admin.academic');
+        Route::post('academic-upload', [AdminController::class, 'academic_upload'])->name('admin.academic.upload');
+        Route::post('academic-delete', [AdminController::class, 'academic_delete'])->name('admin.academic.delete');
+        Route::get('academic-download/{id}', [AdminController::class, 'academic_download'])->name('admin.academic.download');
     });
 });
 
