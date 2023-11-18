@@ -25,6 +25,9 @@ Route::prefix('admin')->group(function () {
         Route::get('home', [AdminController::class, 'home'])->name('admin.home');
 
         Route::get('foreign', [AdminController::class, 'foreign'])->name('admin.foreign');
+        Route::post('foreign-upload', [AdminController::class, 'foreign_upload'])->name('admin.foreign.upload');
+        Route::post('foreign-delete', [AdminController::class, 'foreign_delete'])->name('admin.foreign.delete');
+        Route::get('foreign-download/{id}', [AdminController::class, 'foreign_download'])->name('admin.foreign.download');
     });
 });
 
