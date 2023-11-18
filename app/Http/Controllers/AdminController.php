@@ -41,4 +41,10 @@ class AdminController extends Controller
             return redirect()->route('admin.login');
         }
     }
+
+
+
+    public function foreign(){
+        return view('admin.foreign');
+    }
 }

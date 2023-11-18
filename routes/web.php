@@ -24,7 +24,7 @@ Route::prefix('admin')->group(function () {
         Route::get('logout', [AdminController::class, 'logout'])->name('admin.logout');
         Route::get('home', [AdminController::class, 'home'])->name('admin.home');
 
-
+        Route::get('foreign', [AdminController::class, 'foreign'])->name('admin.foreign');
     });
 });
 
