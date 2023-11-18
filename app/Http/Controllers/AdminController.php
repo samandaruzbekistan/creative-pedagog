@@ -246,7 +246,7 @@ class AdminController extends Controller
         $file= public_path(). "/books/".$book->file;
 
         $headers = array(
-            'Content-Type: application/pdf',
+            'Content-Type: application/ppt',
         );
 
         return response()->download($file, $book->file, $headers);
