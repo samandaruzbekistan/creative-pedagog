@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Repositories\AcademicBookRepository;
 use App\Repositories\ForeignBooksRepository;
+use App\Repositories\PresentationRepository;
 use App\Repositories\SchoolBooksRepository;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,7 @@ class AdminController extends Controller
         protected ForeignBooksRepository $foreignBooksRepository,
         protected SchoolBooksRepository $schoolBooksRepository,
         protected AcademicBookRepository $academicBookRepository,
+        protected PresentationRepository $presentationRepository,
     )
     {
     }
@@ -73,9 +75,8 @@ class AdminController extends Controller
         $path = $request->file('photo')->move('img/book/',$photo_name);
 
         $rand_number = rand(1,10);
-        $extension = $request->file('file')->extension();
         $orginal_name = $request->file('file')->getClientOriginalName();
-        $file_name = $rand_number.' '.$orginal_name.".".$extension;
+        $file_name = $rand_number.' '.$orginal_name;
         $path2 = $request->file('file')->move('books/',$file_name);
 
         $this->foreignBooksRepository->new_book($request->name, $photo_name, $file_name);
@@ -123,9 +124,8 @@ class AdminController extends Controller
         $path = $request->file('photo')->move('img/book/',$photo_name);
 
         $rand_number = rand(1,10);
-        $extension = $request->file('file')->extension();
         $orginal_name = $request->file('file')->getClientOriginalName();
-        $file_name = $rand_number.' '.$orginal_name.".".$extension;
+        $file_name = $rand_number.' '.$orginal_name;
         $path2 = $request->file('file')->move('books/',$file_name);
 
         $this->schoolBooksRepository->new_book($request->name, $photo_name, $file_name);
@@ -173,9 +173,8 @@ class AdminController extends Controller
         $path = $request->file('photo')->move('img/book/',$photo_name);
 
         $rand_number = rand(1,10);
-        $extension = $request->file('file')->extension();
         $orginal_name = $request->file('file')->getClientOriginalName();
-        $file_name = $rand_number.' '.$orginal_name.".".$extension;
+        $file_name = $rand_number.' '.$orginal_name;
         $path2 = $request->file('file')->move('books/',$file_name);
 
         $this->academicBookRepository->new_book($request->name, $photo_name, $file_name);
@@ -195,6 +194,55 @@ class AdminController extends Controller
 
     public function academic_download($id){
         $book = $this->academicBookRepository->getBook($id);
+        $file= public_path(). "/books/".$book->file;
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+
+        return response()->download($file, $book->file, $headers);
+    }
+
+
+//  Presentation book control
+    public function presentation(){
+        $books = $this->presentationRepository->getAllPresentations();
+        return view('admin.presentation', ['books' => $books]);
+    }
+
+    public function presentation_upload(Request $request){
+        $request->validate([
+            'name' => 'required|string',
+            'photo' => 'required|file',
+            'file' => 'required|file',
+        ]);
+        $photo = $request->file('photo')->extension();
+        $name = md5(microtime());
+        $photo_name = $name.".".$photo;
+        $path = $request->file('photo')->move('img/book/',$photo_name);
+
+        $rand_number = rand(1,10);
+        $orginal_name = $request->file('file')->getClientOriginalName();
+        $file_name = $rand_number.' '.$orginal_name;
+        $path2 = $request->file('file')->move('books/',$file_name);
+
+        $this->presentationRepository->new_presentation($request->name, $photo_name, $file_name);
+        return back()->with('success', 1);
+    }
+
+    public function presentation_delete(Request $request){
+        $request->validate([
+            'book_id' => 'required'
+        ]);
+        $book = $this->presentationRepository->getPresentation($request->book_id);
+        unlink('img/book/'.$book->photo);
+        unlink('books/'.$book->file);
+        $this->presentationRepository->delete_presentation($request->book_id);
+        return back()->with('delete',1);
+    }
+
+    public function presentation_download($id){
+        $book = $this->presentationRepository->getPresentation($id);
         $file= public_path(). "/books/".$book->file;
 
         $headers = array(

@@ -26,7 +26,7 @@
     <nav id="sidebar" class="sidebar js-sidebar">
         <div class="sidebar-content js-simplebar">
             <a class="sidebar-brand" href="/">
-                <span class="align-middle">Ideal Study <br>O'quv markazi</span>
+                <span class="align-middle">Creative <br>pedagog</span>
             </a>
 
             <ul class="sidebar-nav">
@@ -87,6 +87,17 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item @yield('presentation')">
+                    <a class="sidebar-link" href="{{ route('admin.presentation') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-play align-middle">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <span class="align-middle">Taqdimotlar</span>
+                    </a>
+                </li>
+
 
             </ul>
 
@@ -129,8 +140,8 @@
                 <div class="row text-muted">
                     <div class="col-6 text-start">
                         <p class="mb-0">
-                            <a class="text-muted" href="#" target="_blank"><strong>Ideal Study</strong></a> - <a
-                                class="text-muted" href="#" target="_blank"><strong>O'quv markazi</strong></a> &copy;
+                            <a class="text-muted" href="#" target="_blank"><strong>Gold Apps</strong></a> - <a
+                                class="text-muted" href="#" target="_blank"><strong>IT company</strong></a> &copy;
                         </p>
                     </div>
                     <div class="col-6 text-end">

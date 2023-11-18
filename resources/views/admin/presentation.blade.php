@@ -1,6 +1,6 @@
 @extends('admin.header_footer')
 
-@section('foreign')
+@section('presentation')
     active
 @endsection
 
@@ -10,7 +10,7 @@
             <div class="col-12 col-xl-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <h5 class="card-title mb-0">Xorijiy adabiyotlar</h5>
+                        <h5 class="card-title mb-0">Taqdimotlar</h5>
                         <button class="btn btn-primary add"><i class="align-middle" data-feather="user-plus"></i>
                             Qo'shish
                         </button>
@@ -29,9 +29,9 @@
                             <tr>
                                 <td>{{ $id+1 }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td><a href="{{ route('admin.foreign.download', ['id' => $item->id]) }}">{{ $item->file }}</a></td>
+                                <td><a href="{{ route('admin.presentation.download', ['id' => $item->id]) }}">{{ $item->file }}</a></td>
                                 <td>
-                                    <form action="{{ route('admin.foreign.delete') }}" method="post">
+                                    <form action="{{ route('admin.presentation.delete') }}" method="post">
                                         @csrf
                                         <input type="hidden" name="book_id" value="{{ $item->id }}">
                                         <button type="submit" class="btn btn-danger text-white">
@@ -63,10 +63,10 @@
                 <div class="">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">Yangi kitob qo'shish</h5>
+                            <h5 class="card-title mb-0">Yangi taqdimot qo'shish</h5>
                         </div>
                         <div class="card-body h-100">
-                            <form action="{{ route('admin.foreign.upload') }}" method="post"
+                            <form action="{{ route('admin.presentation.upload') }}" method="post"
                                   enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
