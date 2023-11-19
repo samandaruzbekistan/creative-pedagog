@@ -24,4 +24,11 @@ class TopicRepository
     public function delete_topic($id){
         Topic::where('id', $id)->delete();
     }
+
+    public function update_topic($title, $body, $id){
+        $topic = Topic::find($id);
+        $topic->title = $title;
+        $topic->body = $body;
+        $topic->save();
+    }
 }

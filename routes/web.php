@@ -52,6 +52,7 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('topic', [AdminController::class, 'topic'])->name('admin.topic');
         Route::post('ck/upload', [AdminController::class, 'imgUpload'])->name('imgUpload');
         Route::post('topic_upload-upload', [AdminController::class, 'topic_upload'])->name('admin.topic.upload');
+        Route::post('update-topic', [AdminController::class, 'topic_update'])->name('admin.topic.update');
         Route::post('topic-delete', [AdminController::class, 'delete_topic'])->name('admin.topic.delete');
         Route::get('topic-edit/{id}', [AdminController::class, 'edit_topic'])->name('admin.topic.edit');
 

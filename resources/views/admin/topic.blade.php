@@ -156,6 +156,20 @@
             },
         });
         @endif
+
+        @if(session('updated') == 1)
+        const notyf = new Notyf();
+
+        notyf.warning({
+            message: 'Maqola yangilandi!',
+            duration: 10000,
+            dismissible: true,
+            position: {
+                x: 'right',
+                y: 'bottom'
+            },
+        });
+        @endif
     </script>
 
     <script src="https://cdn.ckeditor.com/4.18.0/full/ckeditor.js"></script>

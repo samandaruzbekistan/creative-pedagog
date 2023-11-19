@@ -14,14 +14,14 @@
                         <h5 class="card-title mb-0">Taxririlash</h5>
                     </div>
                     <div class="card-body h-100">
-                        <form action="{{ route('admin.topic.upload') }}" method="post"
+                        <form action="{{ route('admin.topic.update') }}" method="post"
                               enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label class="form-label">Mavzu <span class="text-danger">*</span></label>
                                 <input name="title" required type="text" class="form-control" value="{{ $topic->title }}" placeholder="">
                             </div>
-
+                            <input type="hidden" name="id" value="{{ $topic->id }}">
                             <div class="mb-3">
                                 <label class="form-label">Maqola</label>
                                 <textarea name="editor" id="editor" cols="30" rows="10">{{ $topic->body }}</textarea>
@@ -82,11 +82,11 @@
         });
         @endif
 
-        @if(session('delete') == 1)
+        @if(session('update') == 1)
         const notyf = new Notyf();
 
         notyf.warning({
-            message: 'Maqola o\'chirildi!',
+            message: 'Maqola yangilandi!',
             duration: 10000,
             dismissible: true,
             position: {

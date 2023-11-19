@@ -296,4 +296,14 @@ class AdminController extends Controller
         return view('admin.edit_topic', ['topic' => $topic]);
     }
 
+    public function topic_update(Request $request){
+        $request->validate([
+            'title' => 'required|string',
+            'id' => 'required',
+            'editor' => 'required|string',
+        ]);
+        $this->topicRepository->update_topic($request->title, $request->editor, $request->id);
+        return redirect()->route('admin.topic')->with('updated', 1);
+    }
+
 }
