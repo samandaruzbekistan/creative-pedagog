@@ -7,6 +7,7 @@ use App\Repositories\AcademicBookRepository;
 use App\Repositories\ForeignBooksRepository;
 use App\Repositories\PresentationRepository;
 use App\Repositories\SchoolBooksRepository;
+use App\Repositories\TopicRepository;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -16,6 +17,7 @@ class AdminController extends Controller
         protected SchoolBooksRepository $schoolBooksRepository,
         protected AcademicBookRepository $academicBookRepository,
         protected PresentationRepository $presentationRepository,
+        protected TopicRepository $topicRepository,
     )
     {
     }
@@ -251,4 +253,47 @@ class AdminController extends Controller
 
         return response()->download($file, $book->file, $headers);
     }
+
+
+//  Topic control
+    public function topic(){
+        $books = $this->topicRepository->getTopics();
+        return view('admin.topic', ['books' => $books]);
+    }
+
+    public function imgUpload(Request $request)
+    {
+        $file = $request->upload;
+        $fileName = $file->getClientOriginalName();
+        $new_name = time().$fileName;
+        $dir = "img/topic_images/";
+        $file->move($dir, $new_name);
+        $url = asset('img/topic_images/'. $new_name);
+        $CkeditorFuncNum = $request->input('CKEditorFuncNum');
+        $status = "<script>window.parent.CKEDITOR.tools.callFunction('$CkeditorFuncNum', '$url', 'Fayl yuklandi')</script>";
+        echo $status;
+    }
+
+    public function topic_upload(Request $request){
+        $request->validate([
+            'title' => 'required|string',
+            'editor' => 'required|string',
+        ]);
+        $this->topicRepository->newTopic($request->title, $request->editor);
+        return back()->with('success', 1);
+    }
+
+    public function delete_topic(Request $request){
+        $request->validate([
+            'topic_id' => 'required'
+        ]);
+        $this->topicRepository->delete_topic($request->topic_id);
+        return back()->with('delete',1);
+    }
+
+    public function edit_topic($id){
+        $topic = $this->topicRepository->getTopic($id);
+        return view('admin.edit_topic', ['topic' => $topic]);
+    }
+
 }

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')->group(callback: function () {
     Route::view('/', 'admin.login')->name("admin.login");
     Route::post('/auth', [AdminController::class,'auth'])->name('admin.auth');
 
@@ -47,6 +47,14 @@ Route::prefix('admin')->group(function () {
         Route::post('presentation-upload', [AdminController::class, 'presentation_upload'])->name('admin.presentation.upload');
         Route::post('presentation-delete', [AdminController::class, 'presentation_delete'])->name('admin.presentation.delete');
         Route::get('presentation-download/{id}', [AdminController::class, 'presentation_download'])->name('admin.presentation.download');
+
+//        Topic routes
+        Route::get('topic', [AdminController::class, 'topic'])->name('admin.topic');
+        Route::post('ck/upload', [AdminController::class, 'imgUpload'])->name('imgUpload');
+        Route::post('topic_upload-upload', [AdminController::class, 'topic_upload'])->name('admin.topic.upload');
+        Route::post('topic-delete', [AdminController::class, 'delete_topic'])->name('admin.topic.delete');
+        Route::get('topic-edit/{id}', [AdminController::class, 'edit_topic'])->name('admin.topic.edit');
+
     });
 });
 
