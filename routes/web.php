@@ -56,6 +56,9 @@ Route::prefix('admin')->group(callback: function () {
         Route::post('topic-delete', [AdminController::class, 'delete_topic'])->name('admin.topic.delete');
         Route::get('topic-edit/{id}', [AdminController::class, 'edit_topic'])->name('admin.topic.edit');
 
+//        Route Rebus
+        Route::get('rebus', [AdminController::class, 'rebus'])->name('admin.rebus');
+
     });
 });
 

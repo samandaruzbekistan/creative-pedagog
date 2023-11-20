@@ -306,4 +306,12 @@ class AdminController extends Controller
         return redirect()->route('admin.topic')->with('updated', 1);
     }
 
+//    Route Rebus
+    public function rebus(){
+        $books = $this->topicRepository->getTopics();
+        return view('admin.rebus', ['books' => $books]);
+    }
+
+
+
 }
