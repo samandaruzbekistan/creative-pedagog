@@ -27,55 +27,64 @@
 
 <body>
     <header class="main_menu single_page_menu">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-12">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand logo_1" href="index.html"> <img src="img/single_page_logo.png" alt="logo">
-                    </a>
-                    <a class="navbar-brand logo_2" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="{{ route('user.home') }}"> <img src="img/logo.png" alt="logo"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                    <div class="collapse navbar-collapse main-menu-item justify-content-end"
-                         id="navbarSupportedContent">
-                        <ul class="navbar-nav align-items-center">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{  }}">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="cource.html">Courses</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                    <a class="dropdown-item" href="elements.html">Elements</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                            <li class="d-none d-lg-block">
-                                <a class="btn_1" href="#">Get a Quote</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                             id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{{ route('user.home') }}">Bosh sahifa</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Darsliklar
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                        <a class="dropdown-item" href="single-blog.html">Maktab darsliklari</a>
+                                        <a class="dropdown-item" href="elements.html">Oliy ta’lim darsliklari</a>
+                                        <a class="dropdown-item" href="elements.html">Xorij darsliklari</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Malumotlar
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                        <a class="dropdown-item" href="single-blog.html">Maqolalar</a>
+                                        <a class="dropdown-item" href="elements.html">Taqdimotlar</a>
+                                        <a class="dropdown-item" href="elements.html">Xorij darsliklari</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Topshiriqlar
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="single-blog.html">Kreativ topshiriqlar</a>
+                                        <a class="dropdown-item" href="elements.html">Mantiqiy topshiriqlar</a>
+                                        <a class="dropdown-item" href="elements.html">Matematik rebuslar</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('user.about') }}">Biz haqimizda</a>
+                                </li>
+                                <li class="d-none d-lg-block">
+                                    <a class="btn_1" href="#">Maqolalar</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </div>
     </div>
 </header>
 
@@ -96,21 +105,20 @@
 
 
 <!-- footer part start-->
-<footer class="footer-area">
+    <footer class="footer-area">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-sm-6 col-md-4 col-xl-3">
                 <div class="single-footer-widget footer_1">
-                    <a href="index.html"> <img src="img/logo.png" alt=""> </a>
-                    <p>But when shot real her. Chamber her one visite removal six
-                        sending himself boys scot exquisite existend an </p>
-                    <p>But when shot real her hamber her </p>
+                    <a href="{{ route('user.home') }}"> <img src="img/logo.png" alt=""> </a>
+                    <p>Barcha huquqlar himoyalgan va website uchun litsenziya olingan </p>
+                    <p>Har qanday manba boshqa joyda chop etilgan vaqtda manba ko'rsatilishi kerak </p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-xl-4">
                 <div class="single-footer-widget footer_2">
-                    <h4>Newsletter</h4>
-                    <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
+                    <h4>Xabar qoldirish</h4>
+                    <p>O'z taklif va shikoyatlaringizni qoldiring.
                     </p>
                     <form action="#">
                         <div class="form-group">
@@ -134,11 +142,11 @@
             </div>
             <div class="col-xl-3 col-sm-6 col-md-4">
                 <div class="single-footer-widget footer_2">
-                    <h4>Contact us</h4>
+                    <h4>Bog'lanish</h4>
                     <div class="contact_info">
-                        <p><span> Address :</span> Hath of it fly signs bear be one blessed after </p>
-                        <p><span> Phone :</span> +2 36 265 (8060)</p>
-                        <p><span> Email : </span>info@colorlib.com </p>
+                        <p><span> Manzil :</span> Guliston shahar 4-mavze  </p>
+                        <p><span> Telefon :</span> +998 97 341 71 75</p>
+                        <p><span> Telegram : </span>+998 97 341 71 75 </p>
                     </div>
                 </div>
             </div>
@@ -154,9 +162,8 @@
                             <p class="footer-text m-0">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                All rights reserved | This template is made with <i class="ti-heart"
-                                                                                    aria-hidden="true"></i> by <a
-                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                                Barcha huquqlar himoyalangan | Websaytni ishlab chiquvchi <a
+                                    href="https://t.me/Samandar_developer" target="_blank">GOLD APPS</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>

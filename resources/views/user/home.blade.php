@@ -33,7 +33,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="{{ route('user.home') }}"> <img src="img/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -71,8 +71,9 @@
                                         Topshiriqlar
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
+                                        <a class="dropdown-item" href="single-blog.html">Kreativ topshiriqlar</a>
+                                        <a class="dropdown-item" href="elements.html">Mantiqiy topshiriqlar</a>
+                                        <a class="dropdown-item" href="elements.html">Matematik rebuslar</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
@@ -328,25 +329,22 @@
             <div class="row align-items-sm-center align-items-xl-stretch">
                 <div class="col-md-6 col-lg-6">
                     <div class="learning_member_text">
-                        <h5>Advance feature</h5>
-                        <h2>Our Advance Educator
-                            Learning System</h2>
-                        <p>Fifth saying upon divide divide rule for deep their female all hath brind mid Days
-                            and beast greater grass signs abundantly have greater also use over face earth
-                            days years under brought moveth she star</p>
+                        <h5>Qo'shimcha imkoniyatlar</h5>
+                        <h2>Siz uchun yordamchi ta'lim platformasi</h2>
+                        <p>Ushbu platforma mustaqil ta'limni (online ko'rinishda) rivojlantirish uchun ishlab chiqilgan</p>
                         <div class="row">
                             <div class="col-sm-6 col-md-12 col-lg-6">
                                 <div class="learning_member_text_iner">
                                     <span class="ti-pencil-alt"></span>
-                                    <h4>Learn Anywhere</h4>
-                                    <p>There earth face earth behold she star so made void two given and also our</p>
+                                    <h4>Mobillik</h4>
+                                    <p>Platformadan istagan vaqt va istalgan joyda foydalanish mumkin</p>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-12 col-lg-6">
                                 <div class="learning_member_text_iner">
                                     <span class="ti-stamp"></span>
-                                    <h4>Expert Teacher</h4>
-                                    <p>There earth face earth behold she star so made void two given and also our</p>
+                                    <h4>Expert Ustozlar</h4>
+                                    <p>Malakali va tajribali ustozlar tomonidan materiallar tayyorlangan</p>
                                 </div>
                             </div>
                         </div>
@@ -368,8 +366,8 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5">
                     <div class="section_tittle text-center">
-                        <p>tesimonials</p>
-                        <h2>Happy Students</h2>
+                        <p>mualliflar</p>
+                        <h2>Bizning ustozlar</h2>
                     </div>
                 </div>
             </div>
@@ -383,13 +381,13 @@
                                         <p>Behold place was a multiply creeping creature his domin to thiren open void
                                             hath herb divided divide creepeth living shall i call beginning
                                             third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <h4>Botir Xushboqov Xushboqovich</h4>
+                                        <h5> O'qituvchi</h5>
                                     </div>
                                 </div>
                                 <div class="col-lg-4 col-xl-2 col-sm-4">
                                     <div class="testimonial_slider_img">
-                                        <img src="img/testimonial_img_1.png" alt="#">
+                                        <img src="img/author/author1.jpg" alt="#">
                                     </div>
                                 </div>
                                 <div class="col-xl-4 d-none d-xl-block">
@@ -397,77 +395,13 @@
                                         <p>Behold place was a multiply creeping creature his domin to thiren open void
                                             hath herb divided divide creepeth living shall i call beginning
                                             third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                        <h4>Qayumova Shoxsanam To'lqinovna</h4>
+                                        <h5> O'qituvchi</h5>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 d-none d-xl-block">
                                     <div class="testimonial_slider_img">
-                                        <img src="img/testimonial_img_1.png" alt="#">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial_slider">
-                            <div class="row">
-                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-2 col-sm-4">
-                                    <div class="testimonial_slider_img">
-                                        <img src="img/testimonial_img_2.png" alt="#">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 d-none d-xl-block">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 d-none d-xl-block">
-                                    <div class="testimonial_slider_img">
-                                        <img src="img/testimonial_img_1.png" alt="#">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial_slider">
-                            <div class="row">
-                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-2 col-sm-4">
-                                    <div class="testimonial_slider_img">
-                                        <img src="img/testimonial_img_3.png" alt="#">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 d-none d-xl-block">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 d-none d-xl-block">
-                                    <div class="testimonial_slider_img">
-                                        <img src="img/testimonial_img_1.png" alt="#">
+                                        <img src="img/author/author2.jpg" alt="#">
                                     </div>
                                 </div>
                             </div>
@@ -486,8 +420,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5">
                     <div class="section_tittle text-center">
-                        <p>Our Blog</p>
-                        <h2>Students Blog</h2>
+                        <h2>Bo'limlar</h2>
                     </div>
                 </div>
             </div>
@@ -495,13 +428,16 @@
                 <div class="col-sm-6 col-lg-4 col-xl-4">
                     <div class="single-home-blog">
                         <div class="card">
-                            <img src="img/blog/blog_1.png" class="card-img-top" alt="blog">
+                            <div class="card-header">
+                                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                                <dotlottie-player src="https://lottie.host/cb2cb4a8-5c5c-4e0a-906f-9b198d4f526d/c2TfTteHPZ.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                            </div>
                             <div class="card-body">
-                                <a href="#" class="btn_4">Design</a>
+                                <a href="#" class="btn_4">Kreativ pedagog</a>
                                 <a href="blog.html">
-                                    <h5 class="card-title">Dry beginning sea over tree</h5>
+                                    <h5 class="card-title">Maqolalar</h5>
                                 </a>
-                                <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                                <p>Ta'lim sohasida eng sara yangiliklar haqida maqolalar</p>
                                 <ul>
                                     <li><span class="ti-comments"></span>2 Comments</li>
                                     <li><span class="ti-heart"></span>2k Like</li>
@@ -513,13 +449,16 @@
                 <div class="col-sm-6 col-lg-4 col-xl-4">
                     <div class="single-home-blog">
                         <div class="card">
-                            <img src="img/blog/blog_2.png" class="card-img-top" alt="blog">
+                            <div class="card-header">
+                                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                                <dotlottie-player src="https://lottie.host/6748f454-97c1-46d3-8b46-936b59ff7698/zA8iJWWHiZ.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                            </div>
                             <div class="card-body">
-                                <a href="#" class="btn_4">Developing</a>
+                                <a href="#" class="btn_4">Kreativ pedagog</a>
                                 <a href="blog.html">
-                                    <h5 class="card-title">All beginning air two likeness</h5>
+                                    <h5 class="card-title">Taqdimotlar</h5>
                                 </a>
-                                <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                                <p>Mavzulashtirilgan va professional darajada tayyorlangan taqdimotlar</p>
                                 <ul>
                                     <li><span class="ti-comments"></span>2 Comments</li>
                                     <li><span class="ti-heart"></span>2k Like</li>
@@ -531,13 +470,16 @@
                 <div class="col-sm-6 col-lg-4 col-xl-4">
                     <div class="single-home-blog">
                         <div class="card">
-                            <img src="img/blog/blog_3.png" class="card-img-top" alt="blog">
+                            <div class="card-header">
+                                <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+                                <dotlottie-player src="https://lottie.host/da36fbaf-7ce8-4f02-b9e2-e8f1615181e7/KzJM7IBQWz.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+                            </div>
                             <div class="card-body">
-                                <a href="#" class="btn_4">Design</a>
+                                <a href="#" class="btn_4">Kreativ pedagog</a>
                                 <a href="blog.html">
-                                    <h5 class="card-title">Form day seasons sea hand</h5>
+                                    <h5 class="card-title">Rebuslar</h5>
                                 </a>
-                                <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
+                                <p>Mantiqiy va matematik ko'rinishdagi qiziqarli rebuslar</p>
                                 <ul>
                                     <li><span class="ti-comments"></span>2 Comments</li>
                                     <li><span class="ti-heart"></span>2k Like</li>
@@ -557,16 +499,15 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget footer_1">
-                        <a href="index.html"> <img src="img/logo.png" alt=""> </a>
-                        <p>But when shot real her. Chamber her one visite removal six
-                            sending himself boys scot exquisite existend an </p>
-                        <p>But when shot real her hamber her </p>
+                        <a href="{{ route('user.home') }}"> <img src="img/logo.png" alt=""> </a>
+                        <p>Barcha huquqlar himoyalgan va website uchun litsenziya olingan </p>
+                        <p>Har qanday manba boshqa joyda chop etilgan vaqtda manba ko'rsatilishi kerak </p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
                     <div class="single-footer-widget footer_2">
-                        <h4>Newsletter</h4>
-                        <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
+                        <h4>Xabar qoldirish</h4>
+                        <p>O'z taklif va shikoyatlaringizni qoldiring.
                         </p>
                         <form action="#">
                             <div class="form-group">
@@ -590,11 +531,11 @@
                 </div>
                 <div class="col-xl-3 col-sm-6 col-md-4">
                     <div class="single-footer-widget footer_2">
-                        <h4>Contact us</h4>
+                        <h4>Bog'lanish</h4>
                         <div class="contact_info">
-                            <p><span> Address :</span> Hath of it fly signs bear be one blessed after </p>
-                            <p><span> Phone :</span> +2 36 265 (8060)</p>
-                            <p><span> Email : </span>info@colorlib.com </p>
+                            <p><span> Manzil :</span> Guliston shahar 4-mavze  </p>
+                            <p><span> Telefon :</span> +998 97 341 71 75</p>
+                            <p><span> Telegram : </span>+998 97 341 71 75 </p>
                         </div>
                     </div>
                 </div>
@@ -610,9 +551,8 @@
                                 <p class="footer-text m-0">
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     Copyright &copy;<script>document.write(new Date().getFullYear());</script>
-                                    All rights reserved | This template is made with <i class="ti-heart"
-                                                                                        aria-hidden="true"></i> by <a
-                                        href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    Barcha huquqlar himoyalangan | Websaytni ishlab chiquvchi <a
+                                        href="https://t.me/Samandar_developer" target="_blank">GOLD APPS</a>
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 </p>
                             </div>
