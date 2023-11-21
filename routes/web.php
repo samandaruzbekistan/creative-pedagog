@@ -62,4 +62,7 @@ Route::prefix('admin')->group(callback: function () {
     });
 });
 
+Route::view('/','user.home')->name('user.home');
+Route::view('/about','user.about')->name('user.about');
+
 
