@@ -233,7 +233,7 @@
                         <div class="special_cource_text">
                             <a href="course-details.html" class="btn_4">Darsliklar</a>
                             <h4>Tekin</h4>
-                            <a href="course-details.html"><h3>Web Development</h3></a>
+                            <a href="course-details.html"><h3>Maktab darsliklari</h3></a>
                             <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
                             <div class="author_info">
                                 <div class="author_img">
@@ -263,8 +263,8 @@
                         <img src="img/special_cource_2.png" class="special_img" alt="">
                         <div class="special_cource_text">
                             <a href="course-details.html" class="btn_4">Darsliklar</a>
-                            <h4>$160.00</h4>
-                            <a href="course-details.html"><h3>Web UX/UI Design </h3></a>
+                            <h4>Tekin</h4>
+                            <a href="course-details.html"><h3>Xorij darsliklari </h3></a>
                             <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
                             <div class="author_info">
                                 <div class="author_img">
@@ -294,8 +294,8 @@
                         <img src="img/special_cource_3.png" class="special_img" alt="">
                         <div class="special_cource_text">
                             <a href="course-details.html" class="btn_4">Darsliklar</a>
-                            <h4>$140.00</h4>
-                            <a href="course-details.html"><h3>Wordpress Development</h3></a>
+                            <h4>Tekin</h4>
+                            <a href="course-details.html"><h3>Oliy talim darsliklari</h3></a>
                             <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
                             <div class="author_info">
                                 <div class="author_img">
