@@ -10,7 +10,7 @@
             <div class="col-12 col-xl-12">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <h5 class="card-title mb-0">Oliy talim adabiyotlar</h5>
+                        <h5 class="card-title mb-0">Rebuslar</h5>
                         <button class="btn btn-primary add"><i class="align-middle" data-feather="user-plus"></i>
                             Qo'shish
                         </button>
@@ -63,7 +63,7 @@
                 <div class="">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title mb-0">Yangi kitob qo'shish</h5>
+                            <h5 class="card-title mb-0">Yangi rebus qo'shish</h5>
                         </div>
                         <div class="card-body h-100">
                             <form action="{{ route('admin.rebus.upload') }}" method="post"

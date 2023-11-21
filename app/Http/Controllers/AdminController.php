@@ -306,12 +306,54 @@ class AdminController extends Controller
         return redirect()->route('admin.topic')->with('updated', 1);
     }
 
-//    Route Rebus
+//    Route Rebus----------------------------------------Isacoff---------------------------------------------------------------------
     public function rebus(){
         $books = $this->topicRepository->getTopics();
         return view('admin.rebus', ['books' => $books]);
     }
 
+    public function rebusPhotoUpload(Request $request)
+    {
+        $photo = $request->upload;
+        $photoName = $photo->getClientOriginalName();
+        $new_photo_name = time().$photoName;
+        $dir = "img/topic_images/";
+        $photo->move($dir, $new_photo_name);
+        $url = asset('img/topic_images/'. $new_photo_name);
+        $CkeditorFuncNum = $request->input('CKEditorFuncNum');
+        $status = "<script>window.parent.CKEDITOR.tools.callFunction('$CkeditorFuncNum', '$url', 'Fayl yuklandi')</script>";
+        echo $status;
+    }
 
+    public function rebusName_upload(Request $request){
+        $request->validate([
+            'title' => 'required|string',
+            'editor' => 'required|string',
+        ]);
+        $this->topicRepository->newTopic($request->title, $request->editor);
+        return back()->with('success', 1);
+    }
+
+    public function delete_rebusTopic(Request $request){
+        $request->validate([
+            'name_id' => 'required'
+        ]);
+        $this->topicRepository->delete_topic($request->name_id);
+        return back()->with('delete',1);
+    }
+
+    public function edit_rebusName($id){
+        $topic = $this->topicRepository->getTopic($id);
+        return view('admin.edit_name', ['name' => $topic]);
+    }
+
+    public function rebusName_update(Request $request){
+        $request->validate([
+            'name' => 'required|string',
+            'id' => 'required',
+        ]);
+        $this->topicRepository->update_topic($request->rebus, $request->id);
+        return redirect()->route('admin.rebus')->with('updated', 1);
+    }
 
 }
