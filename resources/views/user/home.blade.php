@@ -127,7 +127,7 @@
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><i class="ti-layers"></i></span>
                             <h4>Taqdimotlar</h4>
-                            <p>Professional darajada tayyorlangan mavzulashtirilgan taqdimotlarni yuklab oling va foydalaning</p>
+                            <p>Professional darajada tayyorlangan mavzulashtirilgan taqdimotlarni yuklab oling</p>
                         </div>
                     </div>
                 </div>
@@ -135,9 +135,8 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><i class="ti-new-window"></i></span>
-                            <h4>Qualified Trainers</h4>
-                            <p>Set have great you male grasses yielding yielding first their to called
-                                deep abundantly Set have great you male</p>
+                            <h4>Topshiriqlar</h4>
+                            <p>Turli murakkablikdagi topshiriqlar (mantiqiy, matematik) va rebuslar</p>
                         </div>
                     </div>
                 </div>
@@ -145,9 +144,8 @@
                     <div class="single_feature">
                         <div class="single_feature_part single_feature_part_2">
                             <span class="single_service_icon style_icon"><i class="ti-light-bulb"></i></span>
-                            <h4>Job Oppurtunity</h4>
-                            <p>Set have great you male grasses yielding yielding first their to called deep
-                                abundantly Set have great you male</p>
+                            <h4>Darsliklar</h4>
+                            <p>Maktab, xorij, oliy ta'lim darsliklari va videodarslar joylangan</p>
                         </div>
                     </div>
                 </div>
@@ -167,21 +165,17 @@
                 </div>
                 <div class="col-md-5 col-lg-5">
                     <div class="learning_member_text">
-                        <h5>About us</h5>
-                        <h2>Learning with Love
-                            and Laughter</h2>
-                        <p>Fifth saying upon divide divide rule for deep their female all hath brind Days and beast
-                            greater grass signs abundantly have greater also
-                            days years under brought moveth.</p>
+                        <h5>Biz haqimizda</h5>
+                        <h2>O'qib o'rganing
+                        biz bundan hursand bo'lamiz</h2>
+                        <p>Websaytdan joy olgan barcha materiallar mualliflar tomonidan tayyorlangan va mualliflik huqiqi mavjud.</p>
                         <ul>
-                            <li><span class="ti-pencil-alt"></span>Him lights given i heaven second yielding seas
-                                gathered wear
+                            <li><span class="ti-pencil-alt"></span>Barcha materiallar litsenziyalangan
                             </li>
-                            <li><span class="ti-ruler-pencil"></span>Fly female them whales fly them day deep given
-                                night.
+                            <li><span class="ti-ruler-pencil"></span>Materiallarni boshqa joyda chop etsangiz saytga havola qoldiring
                             </li>
                         </ul>
-                        <a href="#" class="btn_1">Read More</a>
+                        <a href="#" class="btn_1">Darsliklar</a>
                     </div>
                 </div>
             </div>
@@ -196,25 +190,25 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_member_counter">
                         <span class="counter">1024</span>
-                        <h4>All Teachers</h4>
+                        <h4>Ustozlar</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_member_counter">
-                        <span class="counter">960</span>
-                        <h4> All Students</h4>
+                        <span class="counter">1960</span>
+                        <h4>Talabalar</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_member_counter">
                         <span class="counter">1020</span>
-                        <h4>Online Students</h4>
+                        <h4>O'quvchilar</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="single_member_counter">
                         <span class="counter">820</span>
-                        <h4>Ofline Students</h4>
+                        <h4>Mustaqil izlanuvchilar</h4>
                     </div>
                 </div>
             </div>
@@ -228,8 +222,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5">
                     <div class="section_tittle text-center">
-                        <p>popular courses</p>
-                        <h2>Special Courses</h2>
+                        <h2>Darsliklar</h2>
                     </div>
                 </div>
             </div>
@@ -238,8 +231,8 @@
                     <div class="single_special_cource">
                         <img src="img/special_cource_1.png" class="special_img" alt="">
                         <div class="special_cource_text">
-                            <a href="course-details.html" class="btn_4">Web Development</a>
-                            <h4>$130.00</h4>
+                            <a href="course-details.html" class="btn_4">Darsliklar</a>
+                            <h4>Tekin</h4>
                             <a href="course-details.html"><h3>Web Development</h3></a>
                             <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
                             <div class="author_info">
@@ -269,7 +262,7 @@
                     <div class="single_special_cource">
                         <img src="img/special_cource_2.png" class="special_img" alt="">
                         <div class="special_cource_text">
-                            <a href="course-details.html" class="btn_4">design</a>
+                            <a href="course-details.html" class="btn_4">Darsliklar</a>
                             <h4>$160.00</h4>
                             <a href="course-details.html"><h3>Web UX/UI Design </h3></a>
                             <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
@@ -300,7 +293,7 @@
                     <div class="single_special_cource">
                         <img src="img/special_cource_3.png" class="special_img" alt="">
                         <div class="special_cource_text">
-                            <a href="course-details.html" class="btn_4">Wordpress</a>
+                            <a href="course-details.html" class="btn_4">Darsliklar</a>
                             <h4>$140.00</h4>
                             <a href="course-details.html"><h3>Wordpress Development</h3></a>
                             <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
