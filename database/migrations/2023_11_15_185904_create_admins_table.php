@@ -29,6 +29,7 @@ return new class extends Migration
                 'created_at' => \Carbon\Carbon::now()->toDateString(),
                 'updated_at' => \Carbon\Carbon::now()->toDateString(),
             ]);
+//        comment
     }
 
     /**
