@@ -234,13 +234,12 @@
                             <a href="course-details.html" class="btn_4">Darsliklar</a>
                             <h4>Tekin</h4>
                             <a href="course-details.html"><h3>Maktab darsliklari</h3></a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
                             <div class="author_info">
                                 <div class="author_img">
-                                    <img src="img/author/author_1.png" alt="">
+                                    <img src="img/author/author1.jpg" alt="" class="img-thumbnail w-25">
                                     <div class="author_info_text">
-                                        <p>Conduct by:</p>
-                                        <h5><a href="#">James Well</a></h5>
+                                        <p>Muallif:</p>
+                                        <h5><a href="#">Botir Xushboqov</a></h5>
                                     </div>
                                 </div>
                                 <div class="author_rating">
@@ -265,13 +264,12 @@
                             <a href="course-details.html" class="btn_4">Darsliklar</a>
                             <h4>Tekin</h4>
                             <a href="course-details.html"><h3>Xorij darsliklari </h3></a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
                             <div class="author_info">
                                 <div class="author_img">
-                                    <img src="img/author/author_2.png" alt="">
+                                    <img src="img/author/author1.jpg" alt="" class="img-thumbnail w-25">
                                     <div class="author_info_text">
-                                        <p>Conduct by:</p>
-                                        <h5><a href="#">James Well</a></h5>
+                                        <p>Muallif:</p>
+                                        <h5><a href="#">Botir Xushboqov</a></h5>
                                     </div>
                                 </div>
                                 <div class="author_rating">
@@ -296,13 +294,12 @@
                             <a href="course-details.html" class="btn_4">Darsliklar</a>
                             <h4>Tekin</h4>
                             <a href="course-details.html"><h3>Oliy talim darsliklari</h3></a>
-                            <p>Which whose darkness saying were life unto fish wherein all fish of together called</p>
                             <div class="author_info">
                                 <div class="author_img">
-                                    <img src="img/author/author_3.png" alt="">
+                                    <img src="img/author/author1.jpg" alt="" class="img-thumbnail w-25">
                                     <div class="author_info_text">
-                                        <p>Conduct by:</p>
-                                        <h5><a href="#">James Well</a></h5>
+                                        <p>Muallif:</p>
+                                        <h5><a href="#">Botir Xushboqov</a></h5>
                                     </div>
                                 </div>
                                 <div class="author_rating">
