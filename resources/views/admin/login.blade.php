@@ -30,7 +30,7 @@
                     <div class="text-center mt-4">
                         <h1 class="h2">Admin</h1>
                         <p class="lead">
-                            Ideal Study o'quv markazi
+                            kreativ-pedagog.uz
                         </p>
                     </div>
 
@@ -38,7 +38,7 @@
                         <div class="card-body">
                             <div class="m-sm-4">
                                 <div class="text-center">
-                                    <img src="{{ asset('logo.png') }}" alt="Charles Hall" class="img-fluid " width="250"  />
+                                    <img src="{{ asset('img/logo.png') }}" alt="Charles Hall" class="img-fluid " width="250"  />
                                 </div>
                                 <form action="{{ route('admin.auth') }}" method="post">
                                     @csrf

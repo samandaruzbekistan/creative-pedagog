@@ -18,6 +18,7 @@ class RebusRepository
     public function deleteRebus($id){
         Rebus::where('id', $id)->delete();
     }
+
     public function newRebus($name, $photo){
         $book = new Rebus;
         $book->name = $name;

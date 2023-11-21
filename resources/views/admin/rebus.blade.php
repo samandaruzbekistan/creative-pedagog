@@ -29,11 +29,11 @@
                             <tr>
                                 <td>{{ $id+1 }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td><img src="" alt=""></td>
+                                <td><img src="{{ asset('img/rebus/'.$item->photo) }}" alt="" class="img-fluid w-25"></td>
                                 <td>
                                     <form action="{{ route('admin.rebus.delete') }}" method="post">
                                         @csrf
-                                        <input type="hidden" name="book_id" value="{{ $item->id }}">
+                                        <input type="hidden" name="rebus_id" value="{{ $item->id }}">
                                         <button type="submit" class="btn btn-danger text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

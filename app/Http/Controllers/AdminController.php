@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Repositories\AcademicBookRepository;
 use App\Repositories\ForeignBooksRepository;
 use App\Repositories\PresentationRepository;
+use App\Repositories\RebusRepository;
 use App\Repositories\SchoolBooksRepository;
 use App\Repositories\TopicRepository;
 use Illuminate\Http\Request;
@@ -18,6 +19,7 @@ class AdminController extends Controller
         protected AcademicBookRepository $academicBookRepository,
         protected PresentationRepository $presentationRepository,
         protected TopicRepository $topicRepository,
+        protected RebusRepository $rebusRepository,
     )
     {
     }
@@ -306,54 +308,38 @@ class AdminController extends Controller
         return redirect()->route('admin.topic')->with('updated', 1);
     }
 
+
+
+
 //    Route Rebus----------------------------------------Isacoff---------------------------------------------------------------------
     public function rebus(){
-        $books = $this->topicRepository->getTopics();
+        $books = $this->rebusRepository->getAll();
         return view('admin.rebus', ['books' => $books]);
     }
 
-    public function rebusPhotoUpload(Request $request)
-    {
-        $photo = $request->upload;
-        $photoName = $photo->getClientOriginalName();
-        $new_photo_name = time().$photoName;
-        $dir = "img/topic_images/";
-        $photo->move($dir, $new_photo_name);
-        $url = asset('img/topic_images/'. $new_photo_name);
-        $CkeditorFuncNum = $request->input('CKEditorFuncNum');
-        $status = "<script>window.parent.CKEDITOR.tools.callFunction('$CkeditorFuncNum', '$url', 'Fayl yuklandi')</script>";
-        echo $status;
-    }
-
-    public function rebusName_upload(Request $request){
+    public function rebus_upload(Request $request){
         $request->validate([
-            'title' => 'required|string',
-            'editor' => 'required|string',
+            'name' => 'required|string',
+            'photo' => 'required|file',
         ]);
-        $this->topicRepository->newTopic($request->title, $request->editor);
+        $photo = $request->file('photo')->extension();
+        $name = md5(microtime());
+        $photo_name = $name.".".$photo;
+        $path = $request->file('photo')->move('img/rebus/',$photo_name);
+
+        $this->rebusRepository->newRebus($request->name, $photo_name);
         return back()->with('success', 1);
     }
 
-    public function delete_rebusTopic(Request $request){
+    public function delete_rebus(Request $request){
         $request->validate([
-            'name_id' => 'required'
+            'rebus_id' => 'required'
         ]);
-        $this->topicRepository->delete_topic($request->name_id);
+        $rebus = $this->rebusRepository->getRebusbyId($request->rebus_id);
+        unlink('img/rebus/'.$rebus->photo);
+        $this->rebusRepository->deleteRebus($request->rebus_id);
         return back()->with('delete',1);
     }
 
-    public function edit_rebusName($id){
-        $topic = $this->topicRepository->getTopic($id);
-        return view('admin.edit_name', ['name' => $topic]);
-    }
-
-    public function rebusName_update(Request $request){
-        $request->validate([
-            'name' => 'required|string',
-            'id' => 'required',
-        ]);
-        $this->topicRepository->update_topic($request->rebus, $request->id);
-        return redirect()->route('admin.rebus')->with('updated', 1);
-    }
 
 }
