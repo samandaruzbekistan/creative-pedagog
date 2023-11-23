@@ -35,7 +35,7 @@ class AdminController extends Controller
             if ($admin->password == $request->password){
                 session()->put('admin',1);
                 session()->put('fullname',$admin->fullname);
-                return redirect()->route('admin.home');
+                return redirect()->route('admin.profile');
             }
             else{
                 return back()->with("login_error",1);
@@ -49,15 +49,6 @@ class AdminController extends Controller
     public function logout(){
         session()->flush();
         return redirect()->route('admin.login');
-    }
-
-    public function home(){
-        if (session('admin') == 1){
-            return view('admin.home');
-        }
-        else{
-            return redirect()->route('admin.login');
-        }
     }
 
 

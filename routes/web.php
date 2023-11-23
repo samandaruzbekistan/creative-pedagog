@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,7 @@ Route::prefix('admin')->group(callback: function () {
 
     Route::middleware(['adminAuth'])->group(function () {
         Route::get('logout', [AdminController::class, 'logout'])->name('admin.logout');
-        Route::get('home', [AdminController::class, 'home'])->name('admin.home');
+        Route::view('profile','admin.profile')->name('admin.profile');
 
 //        Foreign books routes
         Route::get('foreign', [AdminController::class, 'foreign'])->name('admin.foreign');
@@ -66,5 +67,7 @@ Route::prefix('admin')->group(callback: function () {
 
 Route::view('/','user.home')->name('user.home');
 Route::view('/about','user.about')->name('user.about');
+
+Route::get('school-books', [UserController::class, 'school_books'])->name('user.school');
 
 

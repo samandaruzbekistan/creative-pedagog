@@ -32,8 +32,8 @@
             <ul class="sidebar-nav">
 
 
-                <li class="sidebar-item @yield('home')">
-                    <a class="sidebar-link" href="{{ route('admin.home') }}">
+                <li class="sidebar-item @yield('profile')">
+                    <a class="sidebar-link" href="{{ route('admin.profile') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                              class="feather feather-sliders align-middle">
@@ -47,7 +47,7 @@
                             <line x1="9" y1="8" x2="15" y2="8"></line>
                             <line x1="17" y1="16" x2="23" y2="16"></line>
                         </svg>
-                        <span class="align-middle">Bosh menu</span>
+                        <span class="align-middle">Profile</span>
                     </a>
                 </li>
 
@@ -145,7 +145,7 @@
                         </a>
 
                         <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                            <img src="{{ asset('/img/avatars/no_photo.jpg') }}" class="avatar img-fluid rounded me-1"
+                            <img src="{{ asset('/img/author/author1.jpg') }}" class="avatar img-fluid rounded me-1"
                                  alt="user photo"/> <span class="text-dark">{{ session('fullname') }}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
