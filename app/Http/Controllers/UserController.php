@@ -13,7 +13,6 @@ class UserController extends Controller
     {
     }
 
-
     public function school_books(){
         $books = $this->schoolBooksRepository->getAllBooks();
         return view('user.school', ['']);
