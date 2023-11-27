@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Repositories\AcademicBookRepository;
+use App\Repositories\BlockRepository;
 use App\Repositories\ForeignBooksRepository;
 use App\Repositories\PresentationRepository;
 use App\Repositories\RebusRepository;
@@ -20,6 +21,7 @@ class AdminController extends Controller
         protected PresentationRepository $presentationRepository,
         protected TopicRepository $topicRepository,
         protected RebusRepository $rebusRepository,
+        protected BlockRepository $blockRepository,
     )
     {
     }
@@ -52,7 +54,51 @@ class AdminController extends Controller
     }
 
 
-    public function blocks(){
+    public function block(){
+        $blocks = $this->blockRepository->getAll();
+        return view('admin.blocks', ['blocks' => $blocks]);
+    }
+
+    public function block_view($id){
+        $quizzes = $this->blockRepository->block_quizzes($id);
+        $block = $this->blockRepository->get_block($id);
+        return view('admin.view_block', ['quizzes' => $quizzes, 'block' => $block]);
+    }
+
+    public function upload_block(Request $request){
+        $request->validate([
+            'name' => 'required|string',
+            'time' => 'required|numeric',
+        ]);
+        $this->blockRepository->new($request->name, $request->time);
+        return back();
+    }
+
+    public function upload_quiz(Request $request){
+        $request->validate([
+            'quiz' => 'required|string',
+            'a_answer' => 'required|string',
+            'b_answer' => 'required|string',
+            'c_answer' => 'required|string',
+            'd_answer' => 'required|string',
+            'photo' => 'required|file',
+        ]);
+        $photo_name = "no_photo";
+        if ($request->hasFile('photo')){
+            $photo = $request->file('photo')->extension();
+            $name = md5(microtime());
+            $photo_name = $name.".".$photo;
+            $path = $request->file('photo')->move('img/book/',$photo_name);
+        }
+        $this->blockRepository->quiz_new(
+            $request->quiz,
+            $photo_name,
+            $request->a_answer,
+            $request->b_answer,
+            $request->c_answer,
+            $request->d_answer,
+            $request->block_id,
+        );
 
     }
 

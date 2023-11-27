@@ -62,8 +62,12 @@ Route::prefix('admin')->group(callback: function () {
         Route::post('rebus-delete', [AdminController::class, 'delete_rebus'])->name('admin.rebus.delete');
         Route::post('rebus-upload', [AdminController::class, 'rebus_upload'])->name('admin.rebus.upload');
 
-
-
+//        Route Test
+        Route::get('block', [AdminController::class, 'block'])->name('admin.block');
+        Route::get('admin-block-view/{id}', [AdminController::class, 'block_view'])->name('admin.block.view');
+        Route::post('block-delete', [AdminController::class, 'delete_block'])->name('admin.block.delete');
+        Route::post('block-upload', [AdminController::class, 'upload_block'])->name('admin.block.upload');
+        Route::post('quiz-upload', [AdminController::class, 'upload_quiz'])->name('admin.quiz.upload');
 
     });
 });

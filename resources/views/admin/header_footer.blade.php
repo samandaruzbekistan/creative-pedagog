@@ -124,8 +124,8 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item @yield('test')">
-                    <a class="sidebar-link" href="{{ route('user.school') }}">
+                <li class="sidebar-item @yield('blocks')">
+                    <a class="sidebar-link" href="{{ route('admin.block') }}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                              class="feather feather-file-text align-middle me-2">
@@ -206,9 +206,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @yield('js')
 <div class="notyf" style="justify-content: flex-start; align-items: center;"></div>
-<div class="notyf-announcer" aria-atomic="true" aria-live="polite"
-     style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; outline: 0px;">
-    Inconceivable!
-</div>
+<div class="notyf-announcer" aria-atomic="true" aria-live="polite" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; outline: 0px;">Inconceivable!</div>
 </body>
 </html>

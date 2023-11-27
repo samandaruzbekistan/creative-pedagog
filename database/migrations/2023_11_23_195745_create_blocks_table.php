@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('time');
-            $table->integer('quiz_count');
+            $table->integer('quiz_count')->default(0);
             $table->timestamps();
         });
     }
