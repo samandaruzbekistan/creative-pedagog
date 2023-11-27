@@ -32,7 +32,9 @@
                             <tr>
                                 <td>{{ $id+1 }}</td>
                                 <td>{{ $item->quiz }}</td>
-                                <td>{{ $item->answer }}</td>
+                                @foreach($item->answers as $answer)
+                                    <td>{{ $answer }}</td>
+                                @endforeach
                                 <td><a href="{{ route('admin.block.view', ['id' => $item->id]) }}"></a></td>
                                 <td>
                                     <form action="{{ route('admin.academic.delete') }}" method="post">

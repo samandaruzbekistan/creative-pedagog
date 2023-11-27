@@ -62,6 +62,7 @@ class AdminController extends Controller
     public function block_view($id){
         $quizzes = $this->blockRepository->block_quizzes($id);
         $block = $this->blockRepository->get_block($id);
+        return $quizzes;
         return view('admin.view_block', ['quizzes' => $quizzes, 'block' => $block]);
     }
 
@@ -81,14 +82,13 @@ class AdminController extends Controller
             'b_answer' => 'required|string',
             'c_answer' => 'required|string',
             'd_answer' => 'required|string',
-            'photo' => 'required|file',
         ]);
         $photo_name = "no_photo";
         if ($request->hasFile('photo')){
             $photo = $request->file('photo')->extension();
             $name = md5(microtime());
             $photo_name = $name.".".$photo;
-            $path = $request->file('photo')->move('img/book/',$photo_name);
+            $path = $request->file('photo')->move('img/quiz/',$photo_name);
         }
         $this->blockRepository->quiz_new(
             $request->quiz,
@@ -99,7 +99,7 @@ class AdminController extends Controller
             $request->d_answer,
             $request->block_id,
         );
-
+        return back();
     }
 
 
