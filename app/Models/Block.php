@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Block extends Model
 {
     use HasFactory;
+
+    public function quizzes()
+    {
+        return $this->hasMany(Quiz::class, 'block_id');
+    }
 }
