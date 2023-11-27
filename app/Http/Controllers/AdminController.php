@@ -36,6 +36,7 @@ class AdminController extends Controller
         if (!empty($admin)){
             if ($admin->password == $request->password){
                 session()->put('admin',1);
+                session()->put('id',$admin->id);
                 session()->put('fullname',$admin->fullname);
                 return redirect()->route('admin.profile');
             }
@@ -53,6 +54,18 @@ class AdminController extends Controller
         return redirect()->route('admin.login');
     }
 
+    public function update_password(Request $request){
+        if ($request->password1 != $request->password2){
+            return back()->with('logic_error',1);
+        }
+        else{
+            $admin = Admin::find(session('id'));
+            $admin->password = $request->password1;
+            $admin->save();
+            return back()->with('success',1);
+        }
+    }
+
 
     public function block(){
         $blocks = $this->blockRepository->getAll();
@@ -62,7 +75,7 @@ class AdminController extends Controller
     public function block_view($id){
         $quizzes = $this->blockRepository->block_quizzes($id);
         $block = $this->blockRepository->get_block($id);
-        return $quizzes;
+//        return $quizzes;
         return view('admin.view_block', ['quizzes' => $quizzes, 'block' => $block]);
     }
 
@@ -99,6 +112,15 @@ class AdminController extends Controller
             $request->d_answer,
             $request->block_id,
         );
+        return back();
+    }
+
+    public function delete_quiz(Request $request){
+        $quiz = $this->blockRepository->getQuiz($request->quiz_id);
+        if ($quiz->photo != "no_photo"){
+            unlink('img/quiz/'.$quiz->photo);
+        }
+        $this->blockRepository->deleteQuiz($request->quiz_id, $request->block_id);
         return back();
     }
 

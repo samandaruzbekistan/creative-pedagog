@@ -49,7 +49,7 @@
                                 <h5 class="card-title mb-0">Parolni yangilash</h5>
                             </div>
                             <div class="card-body h-100">
-                                <form action="" method="post">
+                                <form action="{{ route('admin.password.update') }}" method="post">
                                     @csrf
                                     <div class="mb-3">
                                         <label class="form-label">Yangi parol</label>
@@ -77,7 +77,7 @@
 
 @section('js')
     <script>
-        @if(session('password_error') == 1)
+        @if(session('logic_error') == 1)
         const notyf = new Notyf();
 
         notyf.error({

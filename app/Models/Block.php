@@ -9,6 +9,8 @@ class Block extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['quiz_count'];
+
     public function quizzes()
     {
         return $this->hasMany(Quiz::class, 'block_id');

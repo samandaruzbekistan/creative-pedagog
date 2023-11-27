@@ -24,6 +24,7 @@ Route::prefix('admin')->group(callback: function () {
     Route::middleware(['adminAuth'])->group(function () {
         Route::get('logout', [AdminController::class, 'logout'])->name('admin.logout');
         Route::view('profile','admin.profile')->name('admin.profile');
+        Route::post('profile',[AdminController::class, 'update_password'])->name('admin.password.update');
 
 //        Foreign books routes
         Route::get('foreign', [AdminController::class, 'foreign'])->name('admin.foreign');
@@ -68,6 +69,7 @@ Route::prefix('admin')->group(callback: function () {
         Route::post('block-delete', [AdminController::class, 'delete_block'])->name('admin.block.delete');
         Route::post('block-upload', [AdminController::class, 'upload_block'])->name('admin.block.upload');
         Route::post('quiz-upload', [AdminController::class, 'upload_quiz'])->name('admin.quiz.upload');
+        Route::post('quiz-delete', [AdminController::class, 'delete_quiz'])->name('admin.quiz.delete');
 
     });
 });
