@@ -62,6 +62,9 @@ Route::prefix('admin')->group(callback: function () {
         Route::post('rebus-delete', [AdminController::class, 'delete_rebus'])->name('admin.rebus.delete');
         Route::post('rebus-upload', [AdminController::class, 'rebus_upload'])->name('admin.rebus.upload');
 
+
+
+
     });
 });
 

@@ -52,6 +52,11 @@ class AdminController extends Controller
     }
 
 
+    public function blocks(){
+
+    }
+
+
 //  Foreign book control
     public function foreign(){
         $books = $this->foreignBooksRepository->getAllBooks();
