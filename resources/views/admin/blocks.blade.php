@@ -43,9 +43,9 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <form action="{{ route('admin.academic.delete') }}" method="post">
+                                    <form action="{{ route('admin.block.delete') }}" method="post">
                                         @csrf
-                                        <input type="hidden" name="book_id" value="{{ $item->id }}">
+                                        <input type="hidden" name="block_id" value="{{ $item->id }}">
                                         <button type="submit" class="btn btn-danger text-white">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"

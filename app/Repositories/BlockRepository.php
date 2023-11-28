@@ -87,4 +87,16 @@ class BlockRepository
             'quiz_count' => $q_count
         ]);
     }
+
+    public function delete_block($block_id){
+        $quizzes = $this->block_quizzes($block_id);
+        foreach ($quizzes as $quiz){
+            $this->deleteQuiz($quiz->id, $block_id);
+            if ($quiz->photo != "no_photo"){
+                unlink('img/quiz'.$quiz->photo);
+            }
+        }
+        Block::where('id', $block_id)
+            ->delete();
+    }
 }

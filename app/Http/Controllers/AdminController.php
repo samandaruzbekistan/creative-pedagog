@@ -124,6 +124,11 @@ class AdminController extends Controller
         return back();
     }
 
+    public function delete_block(Request $request){
+        $this->blockRepository->delete_block($request->block_id);
+        return back();
+    }
+
 
 //  Foreign book control
     public function foreign(){
