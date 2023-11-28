@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\AcademicBookRepository;
 use App\Repositories\BlockRepository;
 use App\Repositories\PresentationRepository;
 use App\Repositories\SchoolBooksRepository;
@@ -13,6 +14,7 @@ class UserController extends Controller
         protected BlockRepository $blockRepository,
         protected PresentationRepository $presentationRepository,
         protected SchoolBooksRepository $schoolBooksRepository,
+        protected AcademicBookRepository $academicBookRepository,
     )
     {
     }
@@ -59,5 +61,11 @@ class UserController extends Controller
     public function school(){
         $p = $this->schoolBooksRepository->getAllBooks();
         return view('user.school', ['presentations' => $p]);
+    }
+
+
+    public function academic(){
+        $p = $this->academicBookRepository->getAllBooks();
+        return view('user.academic', ['presentations' => $p]);
     }
 }

@@ -73,7 +73,7 @@
                             <h4>Maktab darsliklari</h4>
                             <p>Umumta'lim maktablari o'qivchilar va ustozlar uchun elektron shakldagi darsliklar.</p>
                             <div class="main-button">
-                                <a href="#">O'qish</a>
+                                <a href="{{ route('user.school') }}">O'qish</a>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                             <h4>Oliy ta'lim darsliklari</h4>
                             <p>Oliy ta'lim muassasalari talabalari va professor o'qituvchilari uchun elektron darsliklar</p>
                             <div class="main-button">
-                                <a href="#">O'qish</a>
+                                <a href="{{ route('user.academic') }}">O'qish</a>
                             </div>
                         </div>
                     </div>

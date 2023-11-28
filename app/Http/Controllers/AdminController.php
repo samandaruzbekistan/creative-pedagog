@@ -227,20 +227,16 @@ class AdminController extends Controller
     public function academic_upload(Request $request){
         $request->validate([
             'name' => 'required|string',
-            'photo' => 'required|file',
             'file' => 'required|file',
         ]);
-        $photo = $request->file('photo')->extension();
-        $name = md5(microtime());
-        $photo_name = $name.".".$photo;
-        $path = $request->file('photo')->move('img/book/',$photo_name);
+
 
         $rand_number = rand(1,10);
         $orginal_name = $request->file('file')->getClientOriginalName();
-        $file_name = $rand_number.' '.$orginal_name;
+        $file_name = $orginal_name;
         $path2 = $request->file('file')->move('books/',$file_name);
 
-        $this->academicBookRepository->new_book($request->name, $photo_name, $file_name);
+        $this->academicBookRepository->new_book($request->name, "no_photo", $file_name);
         return back()->with('success', 1);
     }
 
@@ -249,7 +245,6 @@ class AdminController extends Controller
             'book_id' => 'required'
         ]);
         $book = $this->academicBookRepository->getBook($request->book_id);
-        unlink('img/book/'.$book->photo);
         unlink('books/'.$book->file);
         $this->academicBookRepository->delete_book($request->book_id);
         return back()->with('delete',1);

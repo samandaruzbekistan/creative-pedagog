@@ -19,8 +19,8 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 pr">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="{{ route('user.presentation') }}"><img src="images/school.jpg" class="" alt=""></a>
-                            <span class="category">Taqdimot</span>
+                            <img src="images/school.jpg" class="" alt="">
+                            <span class="category">Kitob</span>
                             <span class="price"><h6></h6></span>
                         </div>
                         <div class="down-content">

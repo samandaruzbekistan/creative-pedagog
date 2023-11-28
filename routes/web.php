@@ -41,7 +41,6 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('academic', [AdminController::class, 'academic'])->name('admin.academic');
         Route::post('academic-upload', [AdminController::class, 'academic_upload'])->name('admin.academic.upload');
         Route::post('academic-delete', [AdminController::class, 'academic_delete'])->name('admin.academic.delete');
-        Route::get('academic-download/{id}', [AdminController::class, 'academic_download'])->name('admin.academic.download');
 
 //        Presentation books routes
         Route::get('presentation', [AdminController::class, 'presentation'])->name('admin.presentation');
@@ -73,10 +72,15 @@ Route::prefix('admin')->group(callback: function () {
 });
 
 Route::get('/',[UserController::class, 'home'])->name('user.home');
+
 Route::get('user-presentation',[UserController::class, 'presentation'])->name('user.presentation');
 Route::get('presentation-download/{id}', [AdminController::class, 'presentation_download'])->name('admin.presentation.download');
 
+Route::get('user-school',[UserController::class, 'school'])->name('user.school');
 Route::get('school-download/{id}', [AdminController::class, 'school_download'])->name('admin.school.download');
+
+Route::get('user-academic',[UserController::class, 'academic'])->name('user.academic');
+Route::get('academic-download/{id}', [AdminController::class, 'academic_download'])->name('admin.academic.download');
 
 
 Route::get('test/{id}',[UserController::class, 'test'])->name('user.test');
@@ -84,6 +88,5 @@ Route::post('test-check',[UserController::class, 'check'])->name('user.test.chec
 Route::view('a','user.home')->name('user.home2');
 Route::view('about','user.about')->name('user.about');
 
-Route::get('school-books', [UserController::class, 'school_books'])->name('user.school');
 
 
