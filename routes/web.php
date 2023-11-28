@@ -36,7 +36,6 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('school', [AdminController::class, 'school'])->name('admin.school');
         Route::post('school-upload', [AdminController::class, 'school_upload'])->name('admin.school.upload');
         Route::post('school-delete', [AdminController::class, 'school_delete'])->name('admin.school.delete');
-        Route::get('school-download/{id}', [AdminController::class, 'school_download'])->name('admin.school.download');
 
 //        Academic books routes
         Route::get('academic', [AdminController::class, 'academic'])->name('admin.academic');
@@ -48,7 +47,6 @@ Route::prefix('admin')->group(callback: function () {
         Route::get('presentation', [AdminController::class, 'presentation'])->name('admin.presentation');
         Route::post('presentation-upload', [AdminController::class, 'presentation_upload'])->name('admin.presentation.upload');
         Route::post('presentation-delete', [AdminController::class, 'presentation_delete'])->name('admin.presentation.delete');
-        Route::get('presentation-download/{id}', [AdminController::class, 'presentation_download'])->name('admin.presentation.download');
 
 //        Topic routes
         Route::get('topic', [AdminController::class, 'topic'])->name('admin.topic');
@@ -75,10 +73,16 @@ Route::prefix('admin')->group(callback: function () {
 });
 
 Route::get('/',[UserController::class, 'home'])->name('user.home');
-Route::get('/test/{id}',[UserController::class, 'test'])->name('user.test');
-Route::post('/test-check',[UserController::class, 'check'])->name('user.test.check');
-Route::view('/a','user.home')->name('user.home2');
-Route::view('/about','user.about')->name('user.about');
+Route::get('user-presentation',[UserController::class, 'presentation'])->name('user.presentation');
+Route::get('presentation-download/{id}', [AdminController::class, 'presentation_download'])->name('admin.presentation.download');
+
+Route::get('school-download/{id}', [AdminController::class, 'school_download'])->name('admin.school.download');
+
+
+Route::get('test/{id}',[UserController::class, 'test'])->name('user.test');
+Route::post('test-check',[UserController::class, 'check'])->name('user.test.check');
+Route::view('a','user.home')->name('user.home2');
+Route::view('about','user.about')->name('user.about');
 
 Route::get('school-books', [UserController::class, 'school_books'])->name('user.school');
 

@@ -35,7 +35,7 @@
             @endforeach
         </div>
         <div class="container d-flex justify-content-center">
-            <button type="submit" class="btn text-white rounded "
+            <button type="submit" id="submit" class="btn text-white rounded "
                     style="font-size: 20px;background-color: #7a6ad8 !important;">Tekshirish
             </button>
         </div>
@@ -57,9 +57,7 @@
             return h + ":" + m + ":" + s;
         }
 
-        $(window).on('load', function () {
-            $('#addPatient').modal('show');
-        });
+
 
         var count = {{ $block->time*60 }};
         var counter = setInterval(timer, 1000);

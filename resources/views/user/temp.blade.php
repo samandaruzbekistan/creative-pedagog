@@ -203,32 +203,16 @@
                     <a class="is_active" href="#!" data-filter=".test">Testlar</a>
                 </li>
                 <li>
-                    <a href="#!" data-filter=".design">Darsliklar</a>
-                </li>
-                <li>
                     <a href="#!" data-filter=".development">Topshiriqlar</a>
                 </li>
                 <li>
-                    <a href="#!" data-filter=".wordpress">Taqdimotlar</a>
+                    <a href="#!" data-filter=".pr">Taqdimotlar</a>
                 </li>
                 <li>
                     <a href="#!" data-filter=".topic">Maqolalar</a>
                 </li>
             </ul>
             <div class="row event_box">
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design">
-                    <div class="events_item">
-                        <div class="thumb">
-                            <a href="#"><img src="images/course-01.jpg" alt=""></a>
-                            <span class="category">Webdesign</span>
-                            <span class="price"><h6><em>$</em>0</h6></span>
-                        </div>
-                        <div class="down-content">
-                            <span class="author">Stella Blair</span>
-                            <h4>Learn Web Design</h4>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
                     <div class="events_item">
                         <div class="thumb">
@@ -243,7 +227,7 @@
                     </div>
                 </div>
                 @foreach($blocks as $test)
-                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 design test">
+                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 test">
                         <div class="events_item">
                             <div class="thumb">
                                 <a href="{{ route('user.test', ['id' => $test->id]) }}"><img class="img-thumbnail" src="images/course-03.jpg" alt=""></a>
@@ -283,16 +267,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 pr">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="images/course-06.jpg" alt=""></a>
-                            <span class="category">Webdesign</span>
-                            <span class="price"><h6><em>$</em>240</h6></span>
+                            <a href="{{ route('user.presentation') }}"><img src="images/course-06.jpg" alt=""></a>
+                            <span class="category">Taqdimot</span>
+                            <span class="price"><h6></h6></span>
                         </div>
                         <div class="down-content">
-                            <span class="author">David Hutson</span>
-                            <h4>Full Stack Developer</h4>
+                            <span class="author">Botir Xushboqov</span>
+                            <h4>Taqdimotlar</h4>
                         </div>
                     </div>
                 </div>
@@ -608,8 +592,8 @@
         </div>
     </div>
 
-
-        <div class="modal show fade" id="addPatient" tabindex="-1">
+    @if(session('result') == 1)
+        <div class="modal fade" id="addPatient" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -623,14 +607,14 @@
                             <polyline points="9 11 12 14 22 4"></polyline>
                             <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                         </svg>
-                        To'gri javob: 20 ta <br><br>
+                        To'gri javob: {{ session('correct') }} ta <br><br>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                              class="feather feather-x align-middle text-danger">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
-                        Noto'gri javob: 20 ta
+                        Noto'gri javob: {{ session('incorrect') }} ta
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn text-white" data-bs-dismiss="modal"
@@ -640,5 +624,17 @@
                 </div>
             </div>
         </div>
-
+    @endif
 @endsection
+
+@section('js')
+    @if(session('result') == 1)
+        <script>
+            $(window).on('load', function () {
+                $('#addPatient').modal('show');
+            });
+        </script>
+    @endif
+@endsection
+
+

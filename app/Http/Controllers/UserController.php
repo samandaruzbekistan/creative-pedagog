@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\BlockRepository;
+use App\Repositories\PresentationRepository;
+use App\Repositories\SchoolBooksRepository;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function __construct(protected BlockRepository $blockRepository)
+    public function __construct(
+        protected BlockRepository $blockRepository,
+        protected PresentationRepository $presentationRepository,
+        protected SchoolBooksRepository $schoolBooksRepository,
+    )
     {
     }
 
@@ -38,6 +44,20 @@ class UserController extends Controller
                 }
             }
         }
-        return [$correct,$incorrect];
+        session()->flash('result',1);
+        session()->flash('correct',$correct);
+        session()->flash('incorrect',$incorrect);
+        return redirect()->route('user.home');
+    }
+
+
+    public function presentation(){
+        $p = $this->presentationRepository->getAllPresentations();
+        return view('user.presentations', ['presentations' => $p]);
+    }
+
+    public function school(){
+        $p = $this->schoolBooksRepository->getAllBooks();
+        return view('user.school', ['presentations' => $p]);
     }
 }
