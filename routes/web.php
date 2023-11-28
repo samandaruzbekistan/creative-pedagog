@@ -74,7 +74,10 @@ Route::prefix('admin')->group(callback: function () {
     });
 });
 
-Route::view('/','user.home')->name('user.home');
+Route::get('/',[UserController::class, 'home'])->name('user.home');
+Route::get('/test/{id}',[UserController::class, 'test'])->name('user.test');
+Route::post('/test-check',[UserController::class, 'check'])->name('user.test.check');
+Route::view('/a','user.home')->name('user.home2');
 Route::view('/about','user.about')->name('user.about');
 
 Route::get('school-books', [UserController::class, 'school_books'])->name('user.school');

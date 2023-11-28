@@ -74,11 +74,6 @@
                                     <input name="name" required type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Rasm</label>
-                                    <input class="form-control" type="file" name="photo" accept="image/*">
-                                    <small class="text-danger">Rasm hajmi 2 mb dan oshmasligi kerak</small>
-                                </div>
-                                <div class="mb-3">
                                     <label class="form-label">Fayl</label>
                                     <input class="form-control" type="file" name="file">
                                 </div>

@@ -24,7 +24,7 @@ class BlockRepository
     }
 
     public function block_quizzes($block_id){
-        return Quiz::with(['answers'])->get();
+        return Quiz::with(['answers'])->where('block_id', $block_id)->get();
     }
 
     public function quiz_new($quiz_text, $photo, $a_answer, $b_answer, $c_answer, $d_answer, $block_id){

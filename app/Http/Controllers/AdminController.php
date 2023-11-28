@@ -75,7 +75,6 @@ class AdminController extends Controller
     public function block_view($id){
         $quizzes = $this->blockRepository->block_quizzes($id);
         $block = $this->blockRepository->get_block($id);
-//        return $quizzes;
         return view('admin.view_block', ['quizzes' => $quizzes, 'block' => $block]);
     }
 
@@ -139,13 +138,10 @@ class AdminController extends Controller
     public function foreign_upload(Request $request){
         $request->validate([
             'name' => 'required|string',
-            'photo' => 'required|file',
             'file' => 'required|file',
         ]);
-        $photo = $request->file('photo')->extension();
-        $name = md5(microtime());
-        $photo_name = $name.".".$photo;
-        $path = $request->file('photo')->move('img/book/',$photo_name);
+
+        $photo_name = "no_photo";
 
         $rand_number = rand(1,10);
         $orginal_name = $request->file('file')->getClientOriginalName();
@@ -188,17 +184,12 @@ class AdminController extends Controller
     public function school_upload(Request $request){
         $request->validate([
             'name' => 'required|string',
-            'photo' => 'required|file',
-            'file' => 'required|file',
         ]);
-        $photo = $request->file('photo')->extension();
-        $name = md5(microtime());
-        $photo_name = $name.".".$photo;
-        $path = $request->file('photo')->move('img/book/',$photo_name);
+        $photo_name = "no_photo";
 
         $rand_number = rand(1,10);
         $orginal_name = $request->file('file')->getClientOriginalName();
-        $file_name = $rand_number.' '.$orginal_name;
+        $file_name = $orginal_name;
         $path2 = $request->file('file')->move('books/',$file_name);
 
         $this->schoolBooksRepository->new_book($request->name, $photo_name, $file_name);
@@ -210,7 +201,6 @@ class AdminController extends Controller
             'book_id' => 'required'
         ]);
         $book = $this->schoolBooksRepository->getBook($request->book_id);
-        unlink('img/book/'.$book->photo);
         unlink('books/'.$book->file);
         $this->schoolBooksRepository->delete_book($request->book_id);
         return back()->with('delete',1);
@@ -286,13 +276,10 @@ class AdminController extends Controller
     public function presentation_upload(Request $request){
         $request->validate([
             'name' => 'required|string',
-            'photo' => 'required|file',
             'file' => 'required|file',
         ]);
-        $photo = $request->file('photo')->extension();
-        $name = md5(microtime());
-        $photo_name = $name.".".$photo;
-        $path = $request->file('photo')->move('img/book/',$photo_name);
+
+        $photo_name ="no_photo";
 
         $rand_number = rand(1,10);
         $orginal_name = $request->file('file')->getClientOriginalName();
@@ -308,7 +295,6 @@ class AdminController extends Controller
             'book_id' => 'required'
         ]);
         $book = $this->presentationRepository->getPresentation($request->book_id);
-        unlink('img/book/'.$book->photo);
         unlink('books/'.$book->file);
         $this->presentationRepository->delete_presentation($request->book_id);
         return back()->with('delete',1);

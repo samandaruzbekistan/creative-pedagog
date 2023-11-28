@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('quiz_id');
             $table->foreign('quiz_id')->references('id')->on('quizzes');
             $table->text('answer');
-            $table->string('photo');
             $table->integer('is_correct');
             $table->timestamps();
         });
