@@ -68,6 +68,10 @@ Route::prefix('admin')->group(callback: function () {
         Route::post('quiz-upload', [AdminController::class, 'upload_quiz'])->name('admin.quiz.upload');
         Route::post('quiz-delete', [AdminController::class, 'delete_quiz'])->name('admin.quiz.delete');
 
+        Route::get('logic', [AdminController::class, 'logic'])->name('admin.logic');
+        Route::post('logic-upload', [AdminController::class, 'logic_upload'])->name('admin.logic.upload');
+        Route::post('logic-delete', [AdminController::class, 'logic_delete'])->name('admin.logic.delete');
+
     });
 });
 
@@ -81,6 +85,11 @@ Route::get('school-download/{id}', [AdminController::class, 'school_download'])-
 
 Route::get('user-academic',[UserController::class, 'academic'])->name('user.academic');
 Route::get('academic-download/{id}', [AdminController::class, 'academic_download'])->name('admin.academic.download');
+
+Route::get('user-rebus',[UserController::class, 'rebus'])->name('user.rebus');
+
+
+Route::get('logic-download/{id}', [AdminController::class, 'logic_download'])->name('admin.logic.download');
 
 
 Route::get('test/{id}',[UserController::class, 'test'])->name('user.test');

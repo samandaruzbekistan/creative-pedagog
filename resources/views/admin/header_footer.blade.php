@@ -140,6 +140,19 @@
                 </li>
 
 
+                <li class="sidebar-item @yield('logic')">
+                    <a class="sidebar-link" href="{{ route('admin.logic') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-command align-middle">
+                            <path
+                                d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+                        </svg>
+                        <span class="align-middle">Mantiqiy topshiriqlar</span>
+                    </a>
+                </li>
+
+
             </ul>
 
 
@@ -206,6 +219,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @yield('js')
 <div class="notyf" style="justify-content: flex-start; align-items: center;"></div>
-<div class="notyf-announcer" aria-atomic="true" aria-live="polite" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; outline: 0px;">Inconceivable!</div>
+<div class="notyf-announcer" aria-atomic="true" aria-live="polite"
+     style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; outline: 0px;">
+    Inconceivable!
+</div>
 </body>
 </html>

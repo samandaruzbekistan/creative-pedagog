@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Repositories\AcademicBookRepository;
 use App\Repositories\BlockRepository;
 use App\Repositories\ForeignBooksRepository;
+use App\Repositories\LogicRepository;
 use App\Repositories\PresentationRepository;
 use App\Repositories\RebusRepository;
 use App\Repositories\SchoolBooksRepository;
@@ -22,6 +23,7 @@ class AdminController extends Controller
         protected TopicRepository $topicRepository,
         protected RebusRepository $rebusRepository,
         protected BlockRepository $blockRepository,
+        protected LogicRepository $logicRepository,
     )
     {
     }
@@ -126,6 +128,50 @@ class AdminController extends Controller
     public function delete_block(Request $request){
         $this->blockRepository->delete_block($request->block_id);
         return back();
+    }
+
+
+
+    public function logic(){
+        $books = $this->logicRepository->getAll();
+        return view('admin.logic', ['books' => $books]);
+    }
+
+    public function logic_upload(Request $request){
+        $request->validate([
+            'name' => 'required|string',
+            'file' => 'required|file',
+        ]);
+
+
+
+        $orginal_name = $request->file('file')->getClientOriginalName();
+        $file_name = $orginal_name;
+        $path2 = $request->file('file')->move('books/',$file_name);
+
+        $this->logicRepository->new_book($request->name, $file_name);
+        return back()->with('success', 1);
+    }
+
+    public function logic_delete(Request $request){
+        $request->validate([
+            'book_id' => 'required'
+        ]);
+        $book = $this->logicRepository->getBook($request->book_id);
+        unlink('books/'.$book->file);
+        $this->logicRepository->delete_book($request->book_id);
+        return back()->with('delete',1);
+    }
+
+    public function logic_download($id){
+        $book = $this->logicRepository->getBook($id);
+        $file= public_path(). "/books/".$book->file;
+
+        $headers = array(
+            'Content-Type: application/ppt',
+        );
+
+        return response()->download($file, $book->file, $headers);
     }
 
 
