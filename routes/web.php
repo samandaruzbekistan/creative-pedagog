@@ -88,7 +88,7 @@ Route::get('academic-download/{id}', [AdminController::class, 'academic_download
 
 Route::get('user-rebus',[UserController::class, 'rebus'])->name('user.rebus');
 
-
+Route::get('user-logic',[UserController::class, 'logic'])->name('user.logic');
 Route::get('logic-download/{id}', [AdminController::class, 'logic_download'])->name('admin.logic.download');
 
 

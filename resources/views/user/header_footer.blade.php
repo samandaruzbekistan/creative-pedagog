@@ -60,12 +60,11 @@
                     <!-- ***** Serach Start ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Bosh sahifa</a></li>
-                        <li class="scroll-to-section"><a href="#services">Darsliklar</a></li>
-                        <li class="scroll-to-section"><a href="#courses">Courses</a></li>
-                        <li class="scroll-to-section"><a href="#team">Team</a></li>
-                        <li class="scroll-to-section"><a href="#events">Events</a></li>
-                        <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
+                        <li class="scroll-to-section"><a href="{{ route('user.home') }}#top" class="active">Bosh sahifa</a></li>
+                        <li class="scroll-to-section"><a href="{{ route('user.home') }}#services">Darsliklar</a></li>
+                        <li class="scroll-to-section"><a href="{{ route('user.home') }}#courses">Bo'limlar</a></li>
+                        <li class="scroll-to-section"><a href="{{ route('user.home') }}#team">Jamoa</a></li>
+                        <li class="scroll-to-section"><a href="{{ route('user.home') }}#contact">Bog'lanish</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -94,8 +93,8 @@
 <footer>
     <div class="container">
         <div class="col-lg-12">
-            <p>Copyright © 2036 Scholar Organization. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a
-                    href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a></p>
+            <p>Copyright © <script>document.write(new Date().getFullYear());</script> Barcha huquqlar himoyalangan. &nbsp;&nbsp;&nbsp; Developed by: <a
+                    href="https://t.me/Samandar_developer" rel="nofollow" target="_blank">Samandar Sariboyev</a></p>
         </div>
     </div>
 </footer>

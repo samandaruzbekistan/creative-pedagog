@@ -6,51 +6,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+
                     <div class="owl-carousel owl-banner">
                         <div class="item item-1">
                             <div class="header-text">
-                                <span class="category">Our Courses</span>
-                                <h2>With Scholar Teachers, Everything Is Easier</h2>
-                                <p>Scholar is free CSS template designed by TemplateMo for online educational related
-                                    websites. This layout is based on the famous Bootstrap v5.3.0 framework.</p>
+                                <span class="category">Pedagog</span>
+                                <h2>Assalomu Aleykum! Xush kelibsiz</h2>
+                                <p>Saytimizda ta'lim uchun testlar, darsliklar, maqolalar, dasturlar, topshiriqlar, turli rebuslar, metodlar, videodarslar va taqdimotlar joy olgan.</p>
                                 <div class="buttons">
                                     <div class="main-button">
-                                        <a href="#">Request Demo</a>
+                                        <a href="#">Bo'limlar</a>
                                     </div>
                                     <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i> What's Scholar?</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item item-2">
-                            <div class="header-text">
-                                <span class="category">Best Result</span>
-                                <h2>Get the best result out of your effort</h2>
-                                <p>You are allowed to use this template for any educational or commercial purpose. You
-                                    are not allowed to re-distribute the template ZIP file on any other website.</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Request Demo</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i> What's the best result?</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item item-3">
-                            <div class="header-text">
-                                <span class="category">Online Learning</span>
-                                <h2>Online Learning helps you save the time</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporious
-                                    incididunt ut labore et dolore magna aliqua suspendisse.</p>
-                                <div class="buttons">
-                                    <div class="main-button">
-                                        <a href="#">Request Demo</a>
-                                    </div>
-                                    <div class="icon-button">
-                                        <a href="#"><i class="fa fa-play"></i> What's Online Course?</a>
+                                        <a href="#"><i class="fa fa-play"></i> </a>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +212,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="images/course-04.jpg" alt=""></a>
+                            <a href="{{ route('user.logic') }}"><img src="images/course-04.jpg" alt=""></a>
                             <span class="category">Topshiriqlar</span>
                             <span class="price"><h6><em>$</em>0</h6></span>
                         </div>
@@ -323,13 +291,13 @@
 
     <div class="team section" id="team">
         <div class="container">
-            <div class="row">
+            <div class="row text-center justify-content-center">
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
-                            <img src="images/member-01.jpg" alt="">
-                            <span class="category">UX Teacher</span>
-                            <h4>Sophia Rose</h4>
+                            <img src="../img/author/author11.jpg" class="img-fluid" alt="">
+                            <span class="category">Muallif</span>
+                            <h4>Botir Xushboqov</h4>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -341,198 +309,14 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="team-member">
                         <div class="main-content">
-                            <img src="images/member-02.jpg" alt="">
-                            <span class="category">Graphic Teacher</span>
-                            <h4>Cindy Walker</h4>
+                            <img src="../img/author/author22.jpg" alt="">
+                            <span class="category">Muallif</span>
+                            <h4>Qayumova Shoxsanam</h4>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="images/member-03.jpg" alt="">
-                            <span class="category">Full Stack Master</span>
-                            <h4>David Hutson</h4>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="images/member-04.jpg" alt="">
-                            <span class="category">Digital Animator</span>
-                            <h4>Stella Blair</h4>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section testimonials">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="owl-carousel owl-testimonials">
-                        <div class="item">
-                            <p>“Please tell your friends or collegues about TemplateMo website. Anyone can access the
-                                website to download free templates. Thank you for visiting.”</p>
-                            <div class="author">
-                                <img src="images/testimonial-author.jpg" alt="">
-                                <span class="category">Full Stack Master</span>
-                                <h4>Claude David</h4>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                gravid.”</p>
-                            <div class="author">
-                                <img src="images/testimonial-author.jpg" alt="">
-                                <span class="category">UI Expert</span>
-                                <h4>Thomas Jefferson</h4>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <p>“Scholar is free website template provided by TemplateMo for educational related
-                                websites. This CSS layout is based on Bootstrap v5.3.0 framework.”</p>
-                            <div class="author">
-                                <img src="images/testimonial-author.jpg" alt="">
-                                <span class="category">Digital Animator</span>
-                                <h4>Stella Blair</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 align-self-center">
-                    <div class="section-heading">
-                        <h6>TESTIMONIALS</h6>
-                        <h2>What they say about us?</h2>
-                        <p>You can search free CSS templates on Google using different keywords such as templatemo
-                            portfolio, templatemo gallery, templatemo blue color, etc.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section events" id="events">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-heading">
-                        <h6>Schedule</h6>
-                        <h2>Upcoming Events</h2>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-6">
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="image">
-                                    <img src="images/event-01.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <ul>
-                                    <li>
-                                        <span class="category">Web Design</span>
-                                        <h4>UI Best Practices</h4>
-                                    </li>
-                                    <li>
-                                        <span>Date:</span>
-                                        <h6>16 Feb 2036</h6>
-                                    </li>
-                                    <li>
-                                        <span>Duration:</span>
-                                        <h6>22 Hours</h6>
-                                    </li>
-                                    <li>
-                                        <span>Price:</span>
-                                        <h6>$120</h6>
-                                    </li>
-                                </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-6">
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="image">
-                                    <img src="images/event-02.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <ul>
-                                    <li>
-                                        <span class="category">Front End</span>
-                                        <h4>New Design Trend</h4>
-                                    </li>
-                                    <li>
-                                        <span>Date:</span>
-                                        <h6>24 Feb 2036</h6>
-                                    </li>
-                                    <li>
-                                        <span>Duration:</span>
-                                        <h6>30 Hours</h6>
-                                    </li>
-                                    <li>
-                                        <span>Price:</span>
-                                        <h6>$320</h6>
-                                    </li>
-                                </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-6">
-                    <div class="item">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="image">
-                                    <img src="images/event-03.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <ul>
-                                    <li>
-                                        <span class="category">Full Stack</span>
-                                        <h4>Web Programming</h4>
-                                    </li>
-                                    <li>
-                                        <span>Date:</span>
-                                        <h6>12 Mar 2036</h6>
-                                    </li>
-                                    <li>
-                                        <span>Duration:</span>
-                                        <h6>48 Hours</h6>
-                                    </li>
-                                    <li>
-                                        <span>Price:</span>
-                                        <h6>$440</h6>
-                                    </li>
-                                </ul>
-                                <a href="#"><i class="fa fa-angle-right"></i></a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -545,14 +329,13 @@
             <div class="row">
                 <div class="col-lg-6  align-self-center">
                     <div class="section-heading">
-                        <h6>Contact Us</h6>
-                        <h2>Feel free to contact us anytime</h2>
-                        <p>Thank you for choosing our templates. We provide you best CSS templates at absolutely 100%
-                            free of charge. You may support us by sharing our website to your friends.</p>
+                        <h6>Boglanish</h6>
+                        <h2>Biz bilan bo'glanib talab va taklif bildirishingiz mumkin</h2>
+                        <p>Web sayt bilan tanishib o'z fikringizni bildirayotganligingiz uchun siz minnaddorchilik bildiramiz.</p>
                         <div class="special-offer">
-                            <span class="offer">off<br><em>50%</em></span>
-                            <h6>Valide: <em>24 April 2036</em></h6>
-                            <h4>Special Offer <em>50%</em> OFF!</h4>
+                            <span class="offer"><br><em>-></em></span>
+                            <h6>Websaytda: <em>xatolik topsangiz</em></h6>
+                            <h4>CTRL + Enter <em>ni</em> bosing!</h4>
                             <a href="#"><i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
