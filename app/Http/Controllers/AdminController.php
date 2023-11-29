@@ -322,12 +322,15 @@ class AdminController extends Controller
 
         $photo_name ="no_photo";
 
-        $rand_number = rand(1,10);
         $orginal_name = $request->file('file')->getClientOriginalName();
-        $file_name = $rand_number.' '.$orginal_name;
+        $file_name = $orginal_name;
         $path2 = $request->file('file')->move('books/',$file_name);
 
-        $this->presentationRepository->new_presentation($request->name, $photo_name, $file_name);
+        $orginal_name2 = $request->file('word')->getClientOriginalName();
+        $file_name2 = $orginal_name2;
+        $path3 = $request->file('word')->move('books/',$file_name2);
+
+        $this->presentationRepository->new_presentation($request->name, $photo_name, $file_name,$file_name2);
         return back()->with('success', 1);
     }
 

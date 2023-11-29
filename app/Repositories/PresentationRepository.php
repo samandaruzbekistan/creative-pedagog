@@ -10,11 +10,12 @@ class PresentationRepository
         return Presentation::all();
     }
 
-    public function new_presentation($name, $photo, $file){
+    public function new_presentation($name, $photo, $file, $text){
         $book = new Presentation;
         $book->name = $name;
         $book->photo = $photo;
         $book->file = $file;
+        $book->text = $text;
         $book->save();
     }
 

@@ -21,6 +21,7 @@
                             <th>#</th>
                             <th>Nomi</th>
                             <th>File</th>
+                            <th>Word</th>
                             <th>O'chirish</th>
                         </tr>
                         </thead>
@@ -30,6 +31,7 @@
                                 <td>{{ $id+1 }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td><a href="{{ route('admin.presentation.download', ['id' => $item->id]) }}">{{ $item->file }}</a></td>
+                                <td><a href="{{ route('admin.presentation.download', ['id' => $item->id]) }}">{{ $item->text }}</a></td>
                                 <td>
                                     <form action="{{ route('admin.presentation.delete') }}" method="post">
                                         @csrf
@@ -76,6 +78,10 @@
                                 <div class="mb-3">
                                     <label class="form-label">Fayl</label>
                                     <input class="form-control" type="file" name="file">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Word</label>
+                                    <input class="form-control" type="file" name="word">
                                 </div>
                                 <div class=" text-end">
                                     <button type="button" class="btn btn-danger cancel">Bekor qilish</button>
