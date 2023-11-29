@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Repositories\AcademicBookRepository;
 use App\Repositories\BlockRepository;
 use App\Repositories\ForeignBooksRepository;
+use App\Repositories\InteraktivRepository;
 use App\Repositories\LogicRepository;
 use App\Repositories\PresentationRepository;
 use App\Repositories\RebusRepository;
@@ -24,6 +25,7 @@ class AdminController extends Controller
         protected RebusRepository $rebusRepository,
         protected BlockRepository $blockRepository,
         protected LogicRepository $logicRepository,
+        protected InteraktivRepository $interaktivRepository,
     )
     {
     }
@@ -67,6 +69,37 @@ class AdminController extends Controller
             return back()->with('success',1);
         }
     }
+
+
+    public function interaktiv(){
+        $videos = $this->interaktivRepository->getAll();
+        return view('admin.interaktiv', ['videos' => $videos]);
+    }
+
+    public function upload_interaktiv(Request $request){
+        $request->validate([
+            'name' => 'required|string',
+            'video' => 'required|file',
+        ]);
+        $video = $request->file('video')->extension();
+        $name = md5(microtime());
+        $video_name = $name.".".$video;
+        $path = $request->file('video')->move('videos/',$video_name);
+        $this->interaktivRepository->new($request->name, $video_name);
+        return back()->with('success',1);
+    }
+
+    public function video_delete(Request $request){
+        $request->validate([
+            'video_id' => 'required'
+        ]);
+        $row = $this->interaktivRepository->getById($request->video_id);
+        unlink('videos/'.$row->video);
+        $this->interaktivRepository->delete($request->video_id);
+        return back()->with('delete',1);
+    }
+
+
 
 
     public function block(){

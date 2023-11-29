@@ -72,6 +72,12 @@ Route::prefix('admin')->group(callback: function () {
         Route::post('logic-upload', [AdminController::class, 'logic_upload'])->name('admin.logic.upload');
         Route::post('logic-delete', [AdminController::class, 'logic_delete'])->name('admin.logic.delete');
 
+        Route::get('interaktiv-admin', [AdminController::class, 'interaktiv'])->name('admin.interaktiv');
+        Route::post('quiz-interaktiv', [AdminController::class, 'upload_interaktiv'])->name('admin.interaktiv.upload');
+        Route::post('video-delete', [AdminController::class, 'video_delete'])->name('admin.video.delete');
+
+
+
     });
 });
 
