@@ -35,6 +35,11 @@ class UserController extends Controller
         return view('user.test', ['quizzes' => $quizzes, 'block' => $block]);
     }
 
+    public function tests(){
+        $tests = $this->blockRepository->getAll();
+        return view('user.tests', ['tests' => $tests]);
+    }
+
     public function check(Request $request){
         $correct = 0;
         $incorrect = 0;

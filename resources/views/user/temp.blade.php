@@ -11,8 +11,13 @@
                         <div class="item item-1">
                             <div class="header-text">
                                 <span class="category">Pedagog</span>
-                                <h2>Assalomu Aleykum! Xush kelibsiz</h2>
-                                <p>Saytimizda ta'lim uchun testlar, darsliklar, maqolalar, dasturlar, topshiriqlar, turli rebuslar, metodlar, videodarslar va taqdimotlar joy olgan.</p>
+                                <h2>Assalomu alaykum. Kreativ Pedagog saytiga xush kelibsiz</h2>
+                                <p>
+                                    Saytimizda bo'lajak boshlangʻich sinf oʻqituvchilarining kreativ kompetensiyasini
+                                    rivojlantirish uchun yaratilgan turli xil QR kodli topshiriqlar, taqdimotlar,
+                                    kreativ va tanqidiy fikrlashni oshiruvchi topshiriqlar, xalqaro o'qituvchilarning
+                                    metodlari va videodarslari bilan tanishishingiz mumkin.
+                                </p>
                                 <div class="buttons">
                                     <div class="main-button">
                                         <a href="#">Bo'limlar</a>
@@ -53,7 +58,8 @@
                         </div>
                         <div class="main-content">
                             <h4>Oliy ta'lim darsliklari</h4>
-                            <p>Oliy ta'lim muassasalari talabalari va professor o'qituvchilari uchun elektron darsliklar</p>
+                            <p>Oliy ta'lim muassasalari talabalari va professor o'qituvchilari uchun elektron
+                                darsliklar</p>
                             <div class="main-button">
                                 <a href="{{ route('user.academic') }}">O'qish</a>
                             </div>
@@ -93,7 +99,8 @@
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                  data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>Professional</strong> darajada tayyorlangan mavzulashtirilgan taqdimotlarni yuklab oling
+                                    <strong>Professional</strong> darajada tayyorlangan mavzulashtirilgan taqdimotlarni
+                                    yuklab oling
                                 </div>
                             </div>
                         </div>
@@ -147,7 +154,8 @@
                     <div class="section-heading">
                         <h6>Yangilik</h6>
                         <h2>Ajoyib Imkoniyat</h2>
-                        <p>Siz saytimizga o'z hissangizni qo'shishni istasizmi? Unday bo'lsa bizga materiallaringizni yuboring.</p>
+                        <p>Siz saytimizga o'z hissangizni qo'shishni istasizmi? Unday bo'lsa bizga materiallaringizni
+                            yuboring.</p>
                         <div class="main-button">
                             <a href="#">Mualliflar</a>
                         </div>
@@ -166,50 +174,22 @@
                     </div>
                 </div>
             </div>
-            <ul class="event_filter">
-                <li>
-                    <a class="is_active" href="#!" data-filter=".test">Testlar</a>
-                </li>
-                <li>
-                    <a href="#!" data-filter=".development">Topshiriqlar</a>
-                </li>
-                <li>
-                    <a href="#!" data-filter=".pr">Taqdimotlar</a>
-                </li>
-                <li>
-                    <a href="#!" data-filter=".topic">Maqolalar</a>
-                </li>
-            </ul>
             <div class="row event_box">
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6  development">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="images/course-02.jpg" alt=""></a>
-                            <span class="category">Topshiriqlar</span>
-                            <span class="price"><h6><em>$</em>0</h6></span>
+                            <a href="{{ route('user.tests') }}"><img class="img-thumbnail" src="images/course-03.jpg"
+                                                                     alt=""></a>
+                            <span class="category">Test</span>
+                            <span class="price"></span>
                         </div>
                         <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Kreativ topshiriqlar</h4>
+                            <span class="author">Barchasi</span>
+                            <h4>Testlar</h4>
                         </div>
                     </div>
                 </div>
-                @foreach($blocks as $test)
-                    <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 test">
-                        <div class="events_item">
-                            <div class="thumb">
-                                <a href="{{ route('user.test', ['id' => $test->id]) }}"><img class="img-thumbnail" src="images/course-03.jpg" alt=""></a>
-                                <span class="category">Test</span>
-                                <span class="price"></span>
-                            </div>
-                            <div class="down-content">
-                                <span class="author">Botir Xushboqov</span>
-                                <h4>{{ $test->name }}</h4>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="{{ route('user.logic') }}"><img src="images/course-04.jpg" alt=""></a>
@@ -222,7 +202,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 development">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="{{ route('user.presentation') }}"><img src="images/course-06.jpg" alt=""></a>
+                            <span class="category">Taqdimot</span>
+                            <span class="price"><h6></h6></span>
+                        </div>
+                        <div class="down-content">
+                            <span class="author">Botir Xushboqov</span>
+                            <h4>Taqdimotlar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
                             <a href="{{ route('user.rebus') }}"><img src="images/course-05.jpg" alt=""></a>
@@ -235,16 +228,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 pr">
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="{{ route('user.presentation') }}"><img src="images/course-06.jpg" alt=""></a>
-                            <span class="category">Taqdimot</span>
-                            <span class="price"><h6></h6></span>
+                            <a href="#"><img src="images/course-02.jpg" alt=""></a>
+                            <span class="category">Topshiriqlar</span>
+                            <span class="price"><h6><em>$</em>0</h6></span>
                         </div>
                         <div class="down-content">
                             <span class="author">Botir Xushboqov</span>
-                            <h4>Taqdimotlar</h4>
+                            <h4>Kreativ topshiriqlar</h4>
                         </div>
                     </div>
                 </div>
@@ -331,7 +324,8 @@
                     <div class="section-heading">
                         <h6>Boglanish</h6>
                         <h2>Biz bilan bo'glanib talab va taklif bildirishingiz mumkin</h2>
-                        <p>Web sayt bilan tanishib o'z fikringizni bildirayotganligingiz uchun siz minnaddorchilik bildiramiz.</p>
+                        <p>Web sayt bilan tanishib o'z fikringizni bildirayotganligingiz uchun siz minnaddorchilik
+                            bildiramiz.</p>
                         <div class="special-offer">
                             <span class="offer"><br><em>-></em></span>
                             <h6>Websaytda: <em>xatolik topsangiz</em></h6>

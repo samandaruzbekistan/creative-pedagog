@@ -79,6 +79,7 @@ Route::get('/',[UserController::class, 'home'])->name('user.home');
 
 Route::get('user-presentation',[UserController::class, 'presentation'])->name('user.presentation');
 Route::get('presentation-download/{id}', [AdminController::class, 'presentation_download'])->name('admin.presentation.download');
+Route::get('presentation-word-download/{id}', [AdminController::class, 'presentation_word_download'])->name('admin.word.download');
 
 Route::get('user-school',[UserController::class, 'school'])->name('user.school');
 Route::get('school-download/{id}', [AdminController::class, 'school_download'])->name('admin.school.download');
@@ -93,6 +94,7 @@ Route::get('logic-download/{id}', [AdminController::class, 'logic_download'])->n
 
 
 Route::get('test/{id}',[UserController::class, 'test'])->name('user.test');
+Route::get('tests',[UserController::class, 'tests'])->name('user.tests');
 Route::post('test-check',[UserController::class, 'check'])->name('user.test.check');
 Route::view('a','user.home')->name('user.home2');
 Route::view('about','user.about')->name('user.about');

@@ -355,6 +355,17 @@ class AdminController extends Controller
         return response()->download($file, $book->file, $headers);
     }
 
+    public function presentation_word_download($id){
+        $book = $this->presentationRepository->getPresentation($id);
+        $file= public_path(). "/books/".$book->text;
+
+        $headers = array(
+            'Content-Type: application/ppt',
+        );
+
+        return response()->download($file, $book->file, $headers);
+    }
+
 
 //  Topic control
     public function topic(){
