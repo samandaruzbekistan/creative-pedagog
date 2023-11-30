@@ -396,7 +396,7 @@ class AdminController extends Controller
             'Content-Type: application/ppt',
         );
 
-        return response()->download($file, $book->file, $headers);
+        return response()->download($file, $book->text, $headers);
     }
 
 

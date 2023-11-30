@@ -244,13 +244,52 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img class="img-thumbnail" src="images/video.jpg" alt=""></a>
+                            <a href="{{ route('user.interaktiv') }}"><img class="img-thumbnail" src="images/video.jpg" alt=""></a>
                             <span class="category">Topshiriqlar</span>
                             <span class="price"><h6></h6></span>
                         </div>
                         <div class="down-content">
                             <span class="author">Botir Xushboqov</span>
                             <h4>Interaktiv metodlar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img  src="images/topic.jpg" class="img-thumbnail" alt=""></a>
+                            <span class="category">Maqola</span>
+                            <span class="price"><h6></h6></span>
+                        </div>
+                        <div class="down-content">
+                            <span class="author">Botir Xushboqov</span>
+                            <h4>Maqolalar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="images/videolesson.jpg" alt=""></a>
+                            <span class="category">Video</span>
+                            <span class="price"><h6></h6></span>
+                        </div>
+                        <div class="down-content">
+                            <span class="author">Botir Xushboqov</span>
+                            <h4>Videodarslar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="#"><img src="images/pisa.jpg" alt=""></a>
+                            <span class="category">Topshiriq</span>
+                            <span class="price"><h6></h6></span>
+                        </div>
+                        <div class="down-content">
+                            <span class="author">Botir Xushboqov</span>
+                            <h4>Xalqaro baholash topshiriqlari</h4>
                         </div>
                     </div>
                 </div>

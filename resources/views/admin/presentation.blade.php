@@ -31,7 +31,7 @@
                                 <td>{{ $id+1 }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td><a href="{{ route('admin.presentation.download', ['id' => $item->id]) }}">{{ $item->file }}</a></td>
-                                <td><a href="{{ route('admin.presentation.download', ['id' => $item->id]) }}">{{ $item->text }}</a></td>
+                                <td><a href="{{ route('admin.word.download', ['id' => $item->id]) }}">{{ $item->text }}</a></td>
                                 <td>
                                     <form action="{{ route('admin.presentation.delete') }}" method="post">
                                         @csrf
