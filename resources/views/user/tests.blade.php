@@ -25,7 +25,7 @@
                         </div>
                         <div class="down-content">
                             <span class="author">{{ $present->name }}</span><br>
-                            <a href="{{ route('admin.school.download', ['id' => $present->id]) }}"
+                            <a href="{{ route('user.test', ['id' => $present->id]) }}"
                                style="background-color: #7a6ad8 !important;" class="btn text-white">Yechish</a>
                         </div>
                     </div>

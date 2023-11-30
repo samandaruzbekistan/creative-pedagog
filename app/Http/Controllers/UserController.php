@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\AcademicBookRepository;
 use App\Repositories\BlockRepository;
+use App\Repositories\InteraktivRepository;
 use App\Repositories\LogicRepository;
 use App\Repositories\PresentationRepository;
 use App\Repositories\RebusRepository;
@@ -19,6 +20,7 @@ class UserController extends Controller
         protected AcademicBookRepository $academicBookRepository,
         protected RebusRepository $rebusRepository,
         protected LogicRepository $logicRepository,
+        protected InteraktivRepository $interaktivRepository,
     )
     {
     }
@@ -86,5 +88,10 @@ class UserController extends Controller
     public function logic(){
         $p = $this->logicRepository->getAll();
         return view('user.logic', ['presentations' => $p]);
+    }
+
+    public function interaktiv(){
+        $p = $this->interaktivRepository->getAll();
+        return view('user.interaktiv', ['videos' => $p]);
     }
 }
