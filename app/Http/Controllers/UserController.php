@@ -85,6 +85,16 @@ class UserController extends Controller
         return view('user.rebus', ['presentations' => $p]);
     }
 
+    public function rebus_check(Request $request){
+        $rebus = $this->rebusRepository->getRebusbyId($request->rebus_id);
+        if ($rebus->answer == $request->answer){
+            return back()->with('answer',1);
+        }
+        else{
+            return back()->with('answer',0);
+        }
+    }
+
     public function logic(){
         $p = $this->logicRepository->getAll();
         return view('user.logic', ['presentations' => $p]);

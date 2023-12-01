@@ -94,6 +94,7 @@ Route::get('user-academic',[UserController::class, 'academic'])->name('user.acad
 Route::get('academic-download/{id}', [AdminController::class, 'academic_download'])->name('admin.academic.download');
 
 Route::get('user-rebus',[UserController::class, 'rebus'])->name('user.rebus');
+Route::post('user-check',[UserController::class, 'rebus_check'])->name('user.rebus.check');
 
 Route::get('user-interaktiv',[UserController::class, 'interaktiv'])->name('user.interaktiv');
 
