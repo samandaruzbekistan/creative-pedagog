@@ -192,7 +192,8 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="{{ route('user.logic') }}"><img class="img-thumbnail" src="images/course-05.jpg" alt=""></a>
+                            <a href="{{ route('user.logic') }}"><img class="img-thumbnail" src="images/course-05.jpg"
+                                                                     alt=""></a>
                             <span class="category">Topshiriqlar</span>
                             <span class="price"><h6></h6></span>
                         </div>
@@ -244,7 +245,8 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="{{ route('user.interaktiv') }}"><img class="img-thumbnail" src="images/video.jpg" alt=""></a>
+                            <a href="{{ route('user.interaktiv') }}"><img class="img-thumbnail" src="images/video.jpg"
+                                                                          alt=""></a>
                             <span class="category">Topshiriqlar</span>
                             <span class="price"><h6></h6></span>
                         </div>
@@ -257,7 +259,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img  src="images/topic.jpg" class="img-thumbnail" alt=""></a>
+                            <a href="#"><img src="images/topic.jpg" class="img-thumbnail" alt=""></a>
                             <span class="category">Maqola</span>
                             <span class="price"><h6></h6></span>
                         </div>
@@ -376,8 +378,56 @@
                     <div class="section-heading">
                         <h6>Boglanish</h6>
                         <h2>Biz bilan bo'glanib talab va taklif bildirishingiz mumkin</h2>
-                        <p>Web sayt bilan tanishib o'z fikringizni bildirayotganligingiz uchun siz minnaddorchilik
-                            bildiramiz.</p>
+                        {{--                        <p>Web sayt bilan tanishib o'z fikringizni bildirayotganligingiz uchun siz minnaddorchilik--}}
+                        {{--                            bildiramiz.</p>--}}
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="feather feather-mail align-middle me-2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <h5 class="d-inline" style="color: #483285">
+                                    :  qayumovashoxsanam@gmail.com</h5>
+                            </li>
+                            <br>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="feather feather-mail align-middle me-2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <h5 class="d-inline" style="color: #483285">
+                                    :  xushboqovbotir188@gmail.com</h5>
+                            </li>
+                            <br>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="feather feather-phone-call align-middle me-2">
+                                    <path
+                                        d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <h5 class="d-inline" style="color: #483285">
+                                    :  +998 97 341 71 75</h5>
+                            </li>
+                            <br>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="feather feather-link align-middle me-2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                                <h5 class="d-inline" style="color: #483285">
+                                    :  <a href="https://t.me/Shoxsanam_0523" class="nav-link d-inline">Telegram</a></h5>
+                            </li>
+
+                        </ul>
                         <div class="special-offer">
                             <span class="offer"><br><em>-></em></span>
                             <h6>Websaytda: <em>xatolik topsangiz</em></h6>
