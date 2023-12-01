@@ -20,7 +20,8 @@
                         <tr>
                             <th>#</th>
                             <th>Nomi</th>
-                            <th>File</th>
+                            <th>Topshiriq</th>
+                            <th>QR</th>
                             <th>O'chirish</th>
                         </tr>
                         </thead>
@@ -29,7 +30,8 @@
                             <tr>
                                 <td>{{ $id+1 }}</td>
                                 <td>{{ $item->name }}</td>
-                                <td><a href="{{ route('admin.logic.download', ['id' => $item->id]) }}">{{ $item->file }}</a></td>
+                                <td>{{ $item->body }}</td>
+                                <td><img src="{{ asset('img/qr/'.$item->qr) }}" alt="" class="img-fluid w-25"></td>
                                 <td>
                                     <form action="{{ route('admin.logic.delete') }}" method="post">
                                         @csrf
@@ -74,8 +76,13 @@
                                     <input name="name" required type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="mb-3">
+                                    <label class="form-label">Topshiriq <span class="text-danger">*</span></label>
+                                    <textarea name="body" id="" required rows="5" class="form-control"></textarea>
+
+                                </div>
+                                <div class="mb-3">
                                     <label class="form-label">Fayl</label>
-                                    <input class="form-control" type="file" name="file">
+                                    <input class="form-control" type="file" name="qr">
                                 </div>
                                 <div class=" text-end">
                                     <button type="button" class="btn btn-danger cancel">Bekor qilish</button>

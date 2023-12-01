@@ -173,16 +173,16 @@ class AdminController extends Controller
     public function logic_upload(Request $request){
         $request->validate([
             'name' => 'required|string',
-            'file' => 'required|file',
+            'qr' => 'required|file',
         ]);
 
 
 
-        $orginal_name = $request->file('file')->getClientOriginalName();
+        $orginal_name = $request->file('qr')->getClientOriginalName();
         $file_name = $orginal_name;
-        $path2 = $request->file('file')->move('books/',$file_name);
+        $path2 = $request->file('qr')->move('img/qr/',$file_name);
 
-        $this->logicRepository->new_book($request->name, $file_name);
+        $this->logicRepository->new_book($request->name, $file_name, $request->body);
         return back()->with('success', 1);
     }
 
@@ -191,14 +191,14 @@ class AdminController extends Controller
             'book_id' => 'required'
         ]);
         $book = $this->logicRepository->getBook($request->book_id);
-        unlink('books/'.$book->file);
+        unlink('img/qr/'.$book->qr);
         $this->logicRepository->delete_book($request->book_id);
         return back()->with('delete',1);
     }
 
     public function logic_download($id){
         $book = $this->logicRepository->getBook($id);
-        $file= public_path(). "/books/".$book->file;
+        $file= public_path(). "/books/".$book->qr;
 
         $headers = array(
             'Content-Type: application/ppt',
@@ -464,13 +464,14 @@ class AdminController extends Controller
         $request->validate([
             'name' => 'required|string',
             'photo' => 'required|file',
+            'answer' => 'required|string',
         ]);
         $photo = $request->file('photo')->extension();
         $name = md5(microtime());
         $photo_name = $name.".".$photo;
         $path = $request->file('photo')->move('img/rebus/',$photo_name);
 
-        $this->rebusRepository->newRebus($request->name, $photo_name);
+        $this->rebusRepository->newRebus($request->name, $photo_name, $request->answer);
         return back()->with('success', 1);
     }
 

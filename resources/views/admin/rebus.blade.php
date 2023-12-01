@@ -21,6 +21,7 @@
                             <th>#</th>
                             <th>Nomi</th>
                             <th>Rasmi</th>
+                            <th>Javobi</th>
                             <th>O'chirish</th>
                         </tr>
                         </thead>
@@ -30,6 +31,7 @@
                                 <td>{{ $id+1 }}</td>
                                 <td>{{ $item->name }}</td>
                                 <td><img src="{{ asset('img/rebus/'.$item->photo) }}" alt="" class="img-fluid w-25"></td>
+                                <td>{{ $item->answer }}</td>
                                 <td>
                                     <form action="{{ route('admin.rebus.delete') }}" method="post">
                                         @csrf
@@ -72,6 +74,10 @@
                                 <div class="mb-3">
                                     <label class="form-label">Nomi <span class="text-danger">*</span></label>
                                     <input name="name" required type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Javob <span class="text-danger">*</span></label>
+                                    <input name="answer" required type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Rasm</label>

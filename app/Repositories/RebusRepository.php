@@ -19,10 +19,11 @@ class RebusRepository
         Rebus::where('id', $id)->delete();
     }
 
-    public function newRebus($name, $photo){
+    public function newRebus($name, $photo, $answer){
         $book = new Rebus;
         $book->name = $name;
         $book->photo = $photo;
+        $book->answer = $answer;
         $book->save();
     }
 }

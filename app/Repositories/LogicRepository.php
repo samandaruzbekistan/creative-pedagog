@@ -10,10 +10,11 @@ class LogicRepository
         return Logic::all();
     }
 
-    public function new_book($name, $file){
+    public function new_book($name, $file, $body){
         $book = new Logic;
         $book->name = $name;
-        $book->file = $file;
+        $book->body = $body;
+        $book->qr = $file;
         $book->save();
     }
 
