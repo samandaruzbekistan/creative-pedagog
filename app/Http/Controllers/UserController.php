@@ -113,8 +113,12 @@ class UserController extends Controller
     }
 
     public function creative_check(Request $request){
-        return $request;
         $p = $this->creativeRepository->getById($request->id);
-        return view('user.creative', ['presentations' => $p]);
+        if ($p->answer == $request->answer){
+            return back()->with('answer',1);
+        }
+        else{
+            return back()->with('answer',0);
+        }
     }
 }
