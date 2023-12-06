@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repositories\AcademicBookRepository;
 use App\Repositories\BlockRepository;
+use App\Repositories\CreativeRepository;
 use App\Repositories\InteraktivRepository;
 use App\Repositories\LogicRepository;
 use App\Repositories\PresentationRepository;
@@ -21,6 +22,7 @@ class UserController extends Controller
         protected RebusRepository $rebusRepository,
         protected LogicRepository $logicRepository,
         protected InteraktivRepository $interaktivRepository,
+        protected CreativeRepository $creativeRepository,
     )
     {
     }
@@ -103,5 +105,16 @@ class UserController extends Controller
     public function interaktiv(){
         $p = $this->interaktivRepository->getAll();
         return view('user.interaktiv', ['videos' => $p]);
+    }
+
+    public function creative(){
+        $p = $this->creativeRepository->getAll();
+        return view('user.creative', ['presentations' => $p]);
+    }
+
+    public function creative_check(Request $request){
+        return $request;
+        $p = $this->creativeRepository->getById($request->id);
+        return view('user.creative', ['presentations' => $p]);
     }
 }

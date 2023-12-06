@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Repositories\AcademicBookRepository;
 use App\Repositories\BlockRepository;
+use App\Repositories\CreativeRepository;
 use App\Repositories\ForeignBooksRepository;
 use App\Repositories\InteraktivRepository;
 use App\Repositories\LogicRepository;
@@ -26,6 +27,7 @@ class AdminController extends Controller
         protected BlockRepository $blockRepository,
         protected LogicRepository $logicRepository,
         protected InteraktivRepository $interaktivRepository,
+        protected CreativeRepository $creativeRepository,
     )
     {
     }
@@ -68,6 +70,38 @@ class AdminController extends Controller
             $admin->save();
             return back()->with('success',1);
         }
+    }
+
+    public function creative(){
+        $res = $this->creativeRepository->getAll();
+        return view('admin.creative', ['res' => $res]);
+    }
+
+    public function upload_creative(Request $request){
+        $request->validate([
+            'body' => 'required|string',
+            'answer' => 'required|string',
+            'qr' => 'required|file',
+        ]);
+
+
+
+        $orginal_name = $request->file('qr')->getClientOriginalName();
+        $file_name = $orginal_name;
+        $path2 = $request->file('qr')->move('img/qr/',$file_name);
+
+        $this->creativeRepository->new($request->body, $file_name, $request->answer);
+        return back()->with('success', 1);
+    }
+
+    public function delete_creative(Request $request){
+        $request->validate([
+            'book_id' => 'required'
+        ]);
+        $book = $this->creativeRepository->getById($request->book_id);
+        unlink('img/qr/'.$book->photo);
+        $this->creativeRepository->delete($request->book_id);
+        return back()->with('delete',1);
     }
 
 

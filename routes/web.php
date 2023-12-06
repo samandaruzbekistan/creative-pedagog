@@ -72,6 +72,10 @@ Route::prefix('admin')->group(callback: function () {
         Route::post('logic-upload', [AdminController::class, 'logic_upload'])->name('admin.logic.upload');
         Route::post('logic-delete', [AdminController::class, 'logic_delete'])->name('admin.logic.delete');
 
+        Route::get('creative', [AdminController::class, 'creative'])->name('admin.creative');
+        Route::post('creative-upload', [AdminController::class, 'upload_creative'])->name('admin.creative.upload');
+        Route::post('creative-delete', [AdminController::class, 'delete_creative'])->name('admin.creativ.delete');
+
         Route::get('interaktiv-admin', [AdminController::class, 'interaktiv'])->name('admin.interaktiv');
         Route::post('quiz-interaktiv', [AdminController::class, 'upload_interaktiv'])->name('admin.interaktiv.upload');
         Route::post('video-delete', [AdminController::class, 'video_delete'])->name('admin.video.delete');
@@ -100,6 +104,10 @@ Route::get('user-interaktiv',[UserController::class, 'interaktiv'])->name('user.
 
 Route::get('user-logic',[UserController::class, 'logic'])->name('user.logic');
 Route::get('logic-download/{id}', [AdminController::class, 'logic_download'])->name('admin.logic.download');
+
+Route::get('user-creative',[UserController::class, 'creative'])->name('user.creative');
+Route::post('user-creative-check',[UserController::class, 'creative_check'])->name('user.creative.check');
+
 
 
 Route::get('test/{id}',[UserController::class, 'test'])->name('user.test');

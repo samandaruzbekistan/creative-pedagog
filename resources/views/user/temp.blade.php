@@ -232,7 +232,7 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="#"><img src="images/course-02.jpg" alt=""></a>
+                            <a href="{{ route('user.creative') }}"><img src="images/course-02.jpg" alt=""></a>
                             <span class="category">Topshiriqlar</span>
                             <span class="price"><h6></h6></span>
                         </div>
