@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-text">
-                        <h1 class="text-white">Mantiqiy topshiriqlar</h1><br>
+                        <h1 class="text-white">Kreativ topshiriqlar</h1><br>
                     </div>
                 </div>
             </div>
