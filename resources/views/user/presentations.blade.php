@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-text">
-                        <h1 class="text-white">Taqdimotlar</h1><br>
+                        <h1 class="text-white">Testlar</h1><br>
                     </div>
                 </div>
             </div>
@@ -20,13 +20,13 @@
                     <div class="events_item">
                         <div class="thumb">
                             <img src="images/course-06.jpg" class="" alt="">
-                            <span class="category">Taqdimot</span>
+                            <span class="category">Test</span>
                             <span class="price"><h6></h6></span>
                         </div>
                         <div class="down-content">
                             <span class="author">{{ $present->name }}</span><br>
-                            <a href="{{ route('admin.presentation.download', ['id' => $present->id]) }}"
-                               style="background-color: #7a6ad8 !important;" class="btn text-white">Taqdimot</a>
+{{--                            <a href="{{ route('admin.presentation.download', ['id' => $present->id]) }}"--}}
+{{--                               style="background-color: #7a6ad8 !important;" class="btn text-white">Taqdimot</a>--}}
                             <a href="{{ route('admin.word.download', ['id' => $present->id]) }}"
                                style="background-color: #7a6ad8 !important;" class="btn text-white">Materiallar</a>
                         </div>

@@ -11,10 +11,10 @@
                         <div class="item item-1">
                             <div class="header-text">
                                 <span class="category">Pedagog</span>
-                                <h2>Assalomu alaykum. Kreativ Pedagog saytiga xush kelibsiz</h2>
+                                <h2>Assalomu alaykum. Saytimizga xush kelibsiz</h2>
                                 <p>
-                                    Saytimizda bo'lajak boshlangʻich sinf oʻqituvchilarining kreativ kompetensiyasini
-                                    rivojlantirish uchun yaratilgan turli xil QR kodli topshiriqlar, taqdimotlar,
+                                    Saytimizda kredit-modul tizimida bo'lajak boshlangʻich sinf oʻqituvchilarining mantiqiy kompetensiyasini
+                                    rivojlantirish uchun yaratilgan turli xil topshiriqlar, taqdimotlar,
                                     kreativ va tanqidiy fikrlashni oshiruvchi topshiriqlar, xalqaro o'qituvchilarning
                                     metodlari va videodarslari bilan tanishishingiz mumkin.
                                 </p>
@@ -43,8 +43,8 @@
                             <img src="images/service-01.png" alt="online degrees">
                         </div>
                         <div class="main-content">
-                            <h4>Maktab darsliklari</h4>
-                            <p>Umumta'lim maktablari o'qivchilar va ustozlar uchun elektron shakldagi darsliklar.</p>
+                            <h4>Konferensiyalar</h4>
+                            <p>Xalqaro mashtabdagi ilmiy konferensiya materiallari.</p><br>
                             <div class="main-button">
                                 <a href="{{ route('user.school') }}">O'qish</a>
                             </div>
@@ -175,16 +175,43 @@
                 </div>
             </div>
             <div class="row event_box">
+{{--                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">--}}
+{{--                    <div class="events_item">--}}
+{{--                        <div class="thumb">--}}
+{{--                            <a href="{{ route('user.tests') }}"><img class="img-thumbnail" src="images/course-03.jpg"--}}
+{{--                                                                     alt=""></a>--}}
+{{--                            <span class="category">Test</span>--}}
+{{--                            <span class="price"></span>--}}
+{{--                        </div>--}}
+{{--                        <div class="down-content">--}}
+{{--                            <span class="author">Barchasi</span>--}}
+{{--                            <h4>Testlar</h4>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="{{ route('user.tests') }}"><img class="img-thumbnail" src="images/course-03.jpg"
+                            <a href="{{ route('user.academic') }}"><img class="img-thumbnail" src="images/oliy.png"
                                                                      alt=""></a>
-                            <span class="category">Test</span>
-                            <span class="price"></span>
+                            <span class="category">Darslik</span>
+                            <span class="price"><h6></h6></span>
                         </div>
                         <div class="down-content">
-                            <span class="author">Barchasi</span>
+{{--                            <span class="author">Botir Xushboqov</span>--}}
+                            <h4>Oliy ta'lim darsliklari</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
+                    <div class="events_item">
+                        <div class="thumb">
+                            <a href="{{ route('user.presentation') }}"><img class="img-thumbnail" src="images/course-06.jpg" alt=""></a>
+                            <span class="category">Test</span>
+                            <span class="price"><h6></h6></span>
+                        </div>
+                        <div class="down-content">
+{{--                            <span class="author">Botir Xushboqov</span>--}}
                             <h4>Testlar</h4>
                         </div>
                     </div>
@@ -192,109 +219,95 @@
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="{{ route('user.logic') }}"><img class="img-thumbnail" src="images/course-05.jpg"
-                                                                     alt=""></a>
+                            <a href="{{ route('user.rebus') }}"><img class="img-thumbnail" src="img/certificate.png" alt=""></a>
                             <span class="category">Topshiriqlar</span>
                             <span class="price"><h6></h6></span>
                         </div>
                         <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Mantiqiy topshiriqlar</h4>
+{{--                            <span class="author"></span>--}}
+                            <h4>Sertifikatlar</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
                     <div class="events_item">
                         <div class="thumb">
-                            <a href="{{ route('user.presentation') }}"><img src="images/course-06.jpg" alt=""></a>
-                            <span class="category">Taqdimot</span>
+                            <a href="{{ route('user.school') }}"><img class="img-thumbnail" src="images/school.jpg" alt=""></a>
+                            <span class="category">Material</span>
                             <span class="price"><h6></h6></span>
                         </div>
                         <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Taqdimotlar</h4>
+                            {{--                            <span class="author"></span>--}}
+                            <h4>Konferensiyalar</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
-                    <div class="events_item">
-                        <div class="thumb">
-                            <a href="{{ route('user.rebus') }}"><img src="images/course-04.jpg" alt=""></a>
-                            <span class="category">Topshiriqlar</span>
-                            <span class="price"><h6></h6></span>
-                        </div>
-                        <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Matematik rebuslar</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
-                    <div class="events_item">
-                        <div class="thumb">
-                            <a href="{{ route('user.creative') }}"><img src="images/course-02.jpg" alt=""></a>
-                            <span class="category">Topshiriqlar</span>
-                            <span class="price"><h6></h6></span>
-                        </div>
-                        <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Kreativ topshiriqlar</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
-                    <div class="events_item">
-                        <div class="thumb">
-                            <a href="{{ route('user.interaktiv') }}"><img class="img-thumbnail" src="images/video.jpg"
-                                                                          alt=""></a>
-                            <span class="category">Topshiriqlar</span>
-                            <span class="price"><h6></h6></span>
-                        </div>
-                        <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Interaktiv metodlar</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
-                    <div class="events_item">
-                        <div class="thumb">
-                            <a href="#"><img src="images/topic.jpg" class="img-thumbnail" alt=""></a>
-                            <span class="category">Maqola</span>
-                            <span class="price"><h6></h6></span>
-                        </div>
-                        <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Maqolalar</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
-                    <div class="events_item">
-                        <div class="thumb">
-                            <a href="#"><img src="images/videolesson.jpg" alt=""></a>
-                            <span class="category">Video</span>
-                            <span class="price"><h6></h6></span>
-                        </div>
-                        <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Videodarslar</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">
-                    <div class="events_item">
-                        <div class="thumb">
-                            <a href="#"><img src="images/pisa.jpg" alt=""></a>
-                            <span class="category">Topshiriq</span>
-                            <span class="price"><h6></h6></span>
-                        </div>
-                        <div class="down-content">
-                            <span class="author">Botir Xushboqov</span>
-                            <h4>Xalqaro baholash topshiriqlari</h4>
-                        </div>
-                    </div>
-                </div>
+{{--                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">--}}
+{{--                    <div class="events_item">--}}
+{{--                        <div class="thumb">--}}
+{{--                            <a href="{{ route('user.creative') }}"><img src="images/course-02.jpg" alt=""></a>--}}
+{{--                            <span class="category">Topshiriqlar</span>--}}
+{{--                            <span class="price"><h6></h6></span>--}}
+{{--                        </div>--}}
+{{--                        <div class="down-content">--}}
+{{--                            <span class="author">Botir Xushboqov</span>--}}
+{{--                            <h4>Kreativ topshiriqlar</h4>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">--}}
+{{--                    <div class="events_item">--}}
+{{--                        <div class="thumb">--}}
+{{--                            <a href="{{ route('user.interaktiv') }}"><img class="img-thumbnail" src="images/video.jpg"--}}
+{{--                                                                          alt=""></a>--}}
+{{--                            <span class="category">Topshiriqlar</span>--}}
+{{--                            <span class="price"><h6></h6></span>--}}
+{{--                        </div>--}}
+{{--                        <div class="down-content">--}}
+{{--                            <span class="author">Botir Xushboqov</span>--}}
+{{--                            <h4>Interaktiv metodlar</h4>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">--}}
+{{--                    <div class="events_item">--}}
+{{--                        <div class="thumb">--}}
+{{--                            <a href="#"><img src="images/topic.jpg" class="img-thumbnail" alt=""></a>--}}
+{{--                            <span class="category">Maqola</span>--}}
+{{--                            <span class="price"><h6></h6></span>--}}
+{{--                        </div>--}}
+{{--                        <div class="down-content">--}}
+{{--                            <span class="author">Botir Xushboqov</span>--}}
+{{--                            <h4>Maqolalar</h4>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">--}}
+{{--                    <div class="events_item">--}}
+{{--                        <div class="thumb">--}}
+{{--                            <a href="#"><img src="images/videolesson.jpg" alt=""></a>--}}
+{{--                            <span class="category">Video</span>--}}
+{{--                            <span class="price"><h6></h6></span>--}}
+{{--                        </div>--}}
+{{--                        <div class="down-content">--}}
+{{--                            <span class="author">Botir Xushboqov</span>--}}
+{{--                            <h4>Videodarslar</h4>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6">--}}
+{{--                    <div class="events_item">--}}
+{{--                        <div class="thumb">--}}
+{{--                            <a href="#"><img src="images/pisa.jpg" alt=""></a>--}}
+{{--                            <span class="category">Topshiriq</span>--}}
+{{--                            <span class="price"><h6></h6></span>--}}
+{{--                        </div>--}}
+{{--                        <div class="down-content">--}}
+{{--                            <span class="author">Botir Xushboqov</span>--}}
+{{--                            <h4>Xalqaro baholash topshiriqlari</h4>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </section>
@@ -344,7 +357,7 @@
                         <div class="main-content">
                             <img src="../img/author/author11.jpg" class="img-fluid" alt="">
                             <span class="category">Muallif</span>
-                            <h4>Botir Xushboqov</h4>
+                            <h4>Olimov Bahriddin Jalol o’g’li</h4>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
@@ -353,20 +366,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-member">
-                        <div class="main-content">
-                            <img src="../img/author/author22.jpg" alt="">
-                            <span class="category">Muallif</span>
-                            <h4>Qayumova Shoxsanam</h4>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+{{--                <div class="col-lg-3 col-md-6">--}}
+{{--                    <div class="team-member">--}}
+{{--                        <div class="main-content">--}}
+{{--                            <img src="../img/author/author22.jpg" alt="">--}}
+{{--                            <span class="category">Muallif</span>--}}
+{{--                            <h4>Qayumova Shoxsanam</h4>--}}
+{{--                            <ul class="social-icons">--}}
+{{--                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>--}}
+{{--                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>--}}
+{{--                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
@@ -390,19 +403,7 @@
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                                 <h5 class="d-inline" style="color: #483285">
-                                    :  qayumovashoxsanam@gmail.com</h5>
-                            </li>
-                            <br>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="feather feather-mail align-middle me-2">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                                <h5 class="d-inline" style="color: #483285">
-                                    :  xushboqovbotir188@gmail.com</h5>
+                                    :  baxaolim6668@gmail.com</h5>
                             </li>
                             <br>
                             <li>
@@ -413,7 +414,7 @@
                                         d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                                 </svg>
                                 <h5 class="d-inline" style="color: #483285">
-                                    :  +998 97 341 71 75</h5>
+                                    :  +998 97 566 00 04</h5>
                             </li>
                             <br>
                             <li>
@@ -424,7 +425,7 @@
                                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                                 </svg>
                                 <h5 class="d-inline" style="color: #483285">
-                                    :  <a href="https://t.me/Shoxsanam_0523" class="nav-link d-inline">Telegram</a></h5>
+                                    :  <a href="https://t.me/+998975660004" class="nav-link d-inline">Telegram</a></h5>
                             </li>
 
                         </ul>

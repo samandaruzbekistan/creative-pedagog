@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
 
-    <title>Scholar - Online School HTML5 Template</title>
+    <title>Pedagog</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -46,17 +46,17 @@
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="{{ route('user.home') }}" class="logo">
-                        <h5 class="text-white">Kreativ pedagog</h5>
+                        <h6 class="text-white">Kredit-modul tizimida bo‘lajak boshlangich sinf o‘qituvchilari mantiqiy kompetensiyalarini rivojlantirishning elektron metodik xususiyatlari</h6>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Serach Start ***** -->
-                    <div class="search-input">
-                        <form id="search" action="#">
-                            <input type="text" placeholder="Qidirish..." id='searchText' name="searchKeyword"
-                                   onkeypress="handle"/>
-                            <i class="fa fa-search"></i>
-                        </form>
-                    </div>
+{{--                    <div class="search-input">--}}
+{{--                        <form id="search" action="#">--}}
+{{--                            <input type="text" placeholder="Qidirish..." id='searchText' name="searchKeyword"--}}
+{{--                                   onkeypress="handle"/>--}}
+{{--                            <i class="fa fa-search"></i>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
                     <!-- ***** Serach Start ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">

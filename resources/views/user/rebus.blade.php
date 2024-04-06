@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-text">
-                        <h1 class="text-white">Matematik rebuslar</h1><br>
+                        <h1 class="text-white">Sertifikatlar</h1><br>
                     </div>
                 </div>
             </div>
@@ -21,17 +21,17 @@
                         <div class="thumb ">
                             <img src="../img/rebus/{{ $present->photo }}" class="img-thumbnail" alt="">
                         </div>
-                        <div class="down-content">
-                            <form action="{{ route('user.rebus.check') }}" method="post">
-                                @csrf
-                                <input type="text" class="form-control mb-2" name="answer" placeholder="Javobgiz..."
-                                       required>
-                                <input type="hidden" name="rebus_id" value="{{ $present->id }}">
-                                <button style="background-color: #7a6ad8 !important;" class="btn text-white"
-                                        type="submit">Tekshirish
-                                </button>
-                            </form>
-                        </div>
+{{--                        <div class="down-content">--}}
+{{--                            <form action="{{ route('user.rebus.check') }}" method="post">--}}
+{{--                                @csrf--}}
+{{--                                <input type="text" class="form-control mb-2" name="answer" placeholder="Javobgiz..."--}}
+{{--                                       required>--}}
+{{--                                <input type="hidden" name="rebus_id" value="{{ $present->id }}">--}}
+{{--                                <button style="background-color: #7a6ad8 !important;" class="btn text-white"--}}
+{{--                                        type="submit">Tekshirish--}}
+{{--                                </button>--}}
+{{--                            </form>--}}
+{{--                        </div>--}}
                     </div>
 
                 </div>
